@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "group:Bundle_51WanSY/Bundle_51WanSY.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:SDK_51WanSY/SDK_51WanSY.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:SDK_51WanSY_Test/SDK_51WanSY_Test.xcodeproj">
+   </FileRef>
+</Workspace>
