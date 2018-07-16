@@ -1,0 +1,1147 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F820A9D82021AAA400873CF4 /* NSString+Util.m in Sources */ = {isa = PBXBuildFile; fileRef = F820A9D62021AAA200873CF4 /* NSString+Util.m */; };
+		F820A9D92021AAA400873CF4 /* NSString+Util.h in Headers */ = {isa = PBXBuildFile; fileRef = F820A9D72021AAA400873CF4 /* NSString+Util.h */; };
+		F820A9E02022AAF300873CF4 /* WanTextField.h in Headers */ = {isa = PBXBuildFile; fileRef = F820A9DE2022AAF300873CF4 /* WanTextField.h */; };
+		F820A9E12022AAF300873CF4 /* WanTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = F820A9DF2022AAF300873CF4 /* WanTextField.m */; };
+		F820A9E92022ADD400873CF4 /* WanLabel.h in Headers */ = {isa = PBXBuildFile; fileRef = F820A9E72022ADD400873CF4 /* WanLabel.h */; };
+		F820A9EA2022ADD400873CF4 /* WanLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = F820A9E82022ADD400873CF4 /* WanLabel.m */; };
+		F820A9ED2022B24700873CF4 /* WanButton.h in Headers */ = {isa = PBXBuildFile; fileRef = F820A9EB2022B24700873CF4 /* WanButton.h */; };
+		F820A9EE2022B24700873CF4 /* WanButton.m in Sources */ = {isa = PBXBuildFile; fileRef = F820A9EC2022B24700873CF4 /* WanButton.m */; };
+		F8D037A72015E6AA00387B32 /* SDK_51WanSY.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8D0379D2015E6AA00387B32 /* SDK_51WanSY.framework */; };
+		F8D037AE2015E6AA00387B32 /* SDK_51WanSY.h in Headers */ = {isa = PBXBuildFile; fileRef = F8D037A02015E6AA00387B32 /* SDK_51WanSY.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F8D037DE2015E9B700387B32 /* NSString+Base64.h in Headers */ = {isa = PBXBuildFile; fileRef = F8D037D42015E9B700387B32 /* NSString+Base64.h */; };
+		F8D037DF2015E9B700387B32 /* NSString+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = F8D037D52015E9B700387B32 /* NSString+Base64.m */; };
+		F8D037E22015E9B700387B32 /* UIAlertView+Blocks.h in Headers */ = {isa = PBXBuildFile; fileRef = F8D037D82015E9B700387B32 /* UIAlertView+Blocks.h */; };
+		F8D037E32015E9B700387B32 /* UIAlertView+Blocks.m in Sources */ = {isa = PBXBuildFile; fileRef = F8D037D92015E9B700387B32 /* UIAlertView+Blocks.m */; };
+		F8D037E42015E9B700387B32 /* UIColor+Hex.h in Headers */ = {isa = PBXBuildFile; fileRef = F8D037DA2015E9B700387B32 /* UIColor+Hex.h */; };
+		F8D037E52015E9B700387B32 /* UIColor+Hex.m in Sources */ = {isa = PBXBuildFile; fileRef = F8D037DB2015E9B700387B32 /* UIColor+Hex.m */; };
+		F8D037E62015E9B700387B32 /* UIView+Frame.h in Headers */ = {isa = PBXBuildFile; fileRef = F8D037DC2015E9B700387B32 /* UIView+Frame.h */; };
+		F8D037E72015E9B700387B32 /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = F8D037DD2015E9B700387B32 /* UIView+Frame.m */; };
+		F8D038202015E9C300387B32 /* WanConstance.h in Headers */ = {isa = PBXBuildFile; fileRef = F8D037E92015E9C300387B32 /* WanConstance.h */; };
+		F8D038212015E9C300387B32 /* WanUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = F8D037EA2015E9C300387B32 /* WanUtils.h */; };
+		F8D038222015E9C300387B32 /* WanUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = F8D037EB2015E9C300387B32 /* WanUtils.m */; };
+		F8D038232015E9C300387B32 /* AFHTTPSessionManager.h in Headers */ = {isa = PBXBuildFile; fileRef = F8D037EF2015E9C300387B32 /* AFHTTPSessionManager.h */; };
+		F8D038242015E9C300387B32 /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F8D037F02015E9C300387B32 /* AFHTTPSessionManager.m */; };
+		F8D038252015E9C300387B32 /* AFNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = F8D037F12015E9C300387B32 /* AFNetworking.h */; };
+		F8D038262015E9C300387B32 /* AFNetworkReachabilityManager.h in Headers */ = {isa = PBXBuildFile; fileRef = F8D037F22015E9C300387B32 /* AFNetworkReachabilityManager.h */; };
+		F8D038272015E9C300387B32 /* AFNetworkReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F8D037F32015E9C300387B32 /* AFNetworkReachabilityManager.m */; };
+		F8D038282015E9C300387B32 /* AFSecurityPolicy.h in Headers */ = {isa = PBXBuildFile; fileRef = F8D037F42015E9C300387B32 /* AFSecurityPolicy.h */; };
+		F8D038292015E9C300387B32 /* AFSecurityPolicy.m in Sources */ = {isa = PBXBuildFile; fileRef = F8D037F52015E9C300387B32 /* AFSecurityPolicy.m */; };
+		F8D0382A2015E9C300387B32 /* AFURLRequestSerialization.h in Headers */ = {isa = PBXBuildFile; fileRef = F8D037F62015E9C300387B32 /* AFURLRequestSerialization.h */; };
+		F8D0382B2015E9C300387B32 /* AFURLRequestSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = F8D037F72015E9C300387B32 /* AFURLRequestSerialization.m */; };
+		F8D0382C2015E9C300387B32 /* AFURLResponseSerialization.h in Headers */ = {isa = PBXBuildFile; fileRef = F8D037F82015E9C300387B32 /* AFURLResponseSerialization.h */; };
+		F8D0382D2015E9C300387B32 /* AFURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = F8D037F92015E9C300387B32 /* AFURLResponseSerialization.m */; };
+		F8D0382E2015E9C300387B32 /* AFURLSessionManager.h in Headers */ = {isa = PBXBuildFile; fileRef = F8D037FA2015E9C300387B32 /* AFURLSessionManager.h */; };
+		F8D0382F2015E9C400387B32 /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F8D037FB2015E9C300387B32 /* AFURLSessionManager.m */; };
+		F8D038302015E9C400387B32 /* MBProgressHUD.h in Headers */ = {isa = PBXBuildFile; fileRef = F8D037FD2015E9C300387B32 /* MBProgressHUD.h */; };
+		F8D038312015E9C400387B32 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = F8D037FE2015E9C300387B32 /* MBProgressHUD.m */; };
+		F8D038322015E9C400387B32 /* WanProgressHUD.h in Headers */ = {isa = PBXBuildFile; fileRef = F8D037FF2015E9C300387B32 /* WanProgressHUD.h */; };
+		F8D038332015E9C400387B32 /* WanProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = F8D038002015E9C300387B32 /* WanProgressHUD.m */; };
+		F8D038342015E9C400387B32 /* PPUIUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = F8D038012015E9C300387B32 /* PPUIUtils.h */; };
+		F8D038352015E9C400387B32 /* PPUIUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = F8D038022015E9C300387B32 /* PPUIUtils.m */; };
+		F8D038362015E9C400387B32 /* AFAutoPurgingImageCache.h in Headers */ = {isa = PBXBuildFile; fileRef = F8D038042015E9C300387B32 /* AFAutoPurgingImageCache.h */; };
+		F8D038372015E9C400387B32 /* AFAutoPurgingImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = F8D038052015E9C300387B32 /* AFAutoPurgingImageCache.m */; };
+		F8D038382015E9C400387B32 /* AFImageDownloader.h in Headers */ = {isa = PBXBuildFile; fileRef = F8D038062015E9C300387B32 /* AFImageDownloader.h */; };
+		F8D038392015E9C400387B32 /* AFImageDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = F8D038072015E9C300387B32 /* AFImageDownloader.m */; };
+		F8D0383A2015E9C400387B32 /* AFNetworkActivityIndicatorManager.h in Headers */ = {isa = PBXBuildFile; fileRef = F8D038082015E9C300387B32 /* AFNetworkActivityIndicatorManager.h */; };
+		F8D0383B2015E9C400387B32 /* AFNetworkActivityIndicatorManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F8D038092015E9C300387B32 /* AFNetworkActivityIndicatorManager.m */; };
+		F8D0383C2015E9C400387B32 /* UIActivityIndicatorView+AFNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = F8D0380A2015E9C300387B32 /* UIActivityIndicatorView+AFNetworking.h */; };
+		F8D0383D2015E9C400387B32 /* UIActivityIndicatorView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = F8D0380B2015E9C300387B32 /* UIActivityIndicatorView+AFNetworking.m */; };
+		F8D0383E2015E9C400387B32 /* UIButton+AFNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = F8D0380C2015E9C300387B32 /* UIButton+AFNetworking.h */; };
+		F8D0383F2015E9C400387B32 /* UIButton+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = F8D0380D2015E9C300387B32 /* UIButton+AFNetworking.m */; };
+		F8D038402015E9C400387B32 /* UIImage+AFNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = F8D0380E2015E9C300387B32 /* UIImage+AFNetworking.h */; };
+		F8D038412015E9C400387B32 /* UIImageView+AFNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = F8D0380F2015E9C300387B32 /* UIImageView+AFNetworking.h */; };
+		F8D038422015E9C400387B32 /* UIImageView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = F8D038102015E9C300387B32 /* UIImageView+AFNetworking.m */; };
+		F8D038432015E9C400387B32 /* UIKit+AFNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = F8D038112015E9C300387B32 /* UIKit+AFNetworking.h */; };
+		F8D038442015E9C400387B32 /* UIProgressView+AFNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = F8D038122015E9C300387B32 /* UIProgressView+AFNetworking.h */; };
+		F8D038452015E9C400387B32 /* UIProgressView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = F8D038132015E9C300387B32 /* UIProgressView+AFNetworking.m */; };
+		F8D038462015E9C400387B32 /* UIRefreshControl+AFNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = F8D038142015E9C300387B32 /* UIRefreshControl+AFNetworking.h */; };
+		F8D038472015E9C400387B32 /* UIRefreshControl+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = F8D038152015E9C300387B32 /* UIRefreshControl+AFNetworking.m */; };
+		F8D038482015E9C400387B32 /* UIWebView+AFNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = F8D038162015E9C300387B32 /* UIWebView+AFNetworking.h */; };
+		F8D038492015E9C400387B32 /* UIWebView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = F8D038172015E9C300387B32 /* UIWebView+AFNetworking.m */; };
+		F8D0384A2015E9C400387B32 /* YRJSONAdapter.h in Headers */ = {isa = PBXBuildFile; fileRef = F8D038192015E9C300387B32 /* YRJSONAdapter.h */; };
+		F8D0384B2015E9C400387B32 /* YRJSONAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = F8D0381A2015E9C300387B32 /* YRJSONAdapter.m */; };
+		F8D0384C2015E9C400387B32 /* WanNetManager.h in Headers */ = {isa = PBXBuildFile; fileRef = F8D0381C2015E9C300387B32 /* WanNetManager.h */; };
+		F8D0384D2015E9C400387B32 /* WanNetManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F8D0381D2015E9C300387B32 /* WanNetManager.m */; };
+		F8D038502015E9F900387B32 /* WanLoginViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = F8D0384E2015E9F900387B32 /* WanLoginViewController.h */; };
+		F8D038512015E9F900387B32 /* WanLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8D0384F2015E9F900387B32 /* WanLoginViewController.m */; };
+		F8D038552015EA8C00387B32 /* WanBaseViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = F8D038532015EA8C00387B32 /* WanBaseViewController.h */; };
+		F8D038562015EA8C00387B32 /* WanBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8D038542015EA8C00387B32 /* WanBaseViewController.m */; };
+		F8D0385C2015EDC900387B32 /* WanManager.h in Headers */ = {isa = PBXBuildFile; fileRef = F8D0385A2015EDC900387B32 /* WanManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F8D0385D2015EDC900387B32 /* WanManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F8D0385B2015EDC900387B32 /* WanManager.m */; };
+		F8D038782016C40A00387B32 /* WanAccountCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F8D038762016C40A00387B32 /* WanAccountCell.m */; };
+		F8D038792016C40A00387B32 /* WanAccountCell.h in Headers */ = {isa = PBXBuildFile; fileRef = F8D038772016C40A00387B32 /* WanAccountCell.h */; };
+		F8D0387C2016C6A400387B32 /* WanLoginView.h in Headers */ = {isa = PBXBuildFile; fileRef = F8D0387A2016C6A300387B32 /* WanLoginView.h */; };
+		F8D0387D2016C6A400387B32 /* WanLoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = F8D0387B2016C6A400387B32 /* WanLoginView.m */; };
+		F8D038802016D92100387B32 /* WanServer.h in Headers */ = {isa = PBXBuildFile; fileRef = F8D0387E2016D92100387B32 /* WanServer.h */; };
+		F8D038812016D92100387B32 /* WanServer.m in Sources */ = {isa = PBXBuildFile; fileRef = F8D0387F2016D92100387B32 /* WanServer.m */; };
+		F8D038882016E24D00387B32 /* WanQuickRegestViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = F8D038862016E24D00387B32 /* WanQuickRegestViewController.h */; };
+		F8D038892016E24D00387B32 /* WanQuickRegestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8D038872016E24D00387B32 /* WanQuickRegestViewController.m */; };
+		F8D0388D2016E28B00387B32 /* WanQuickRegestView.h in Headers */ = {isa = PBXBuildFile; fileRef = F8D0388B2016E28B00387B32 /* WanQuickRegestView.h */; };
+		F8D0388E2016E28B00387B32 /* WanQuickRegestView.m in Sources */ = {isa = PBXBuildFile; fileRef = F8D0388C2016E28B00387B32 /* WanQuickRegestView.m */; };
+		F8D038952017125800387B32 /* WanRegestViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = F8D038932017125800387B32 /* WanRegestViewController.h */; };
+		F8D038962017125800387B32 /* WanRegestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8D038942017125800387B32 /* WanRegestViewController.m */; };
+		F8D0389A2017127A00387B32 /* WanRegistView.h in Headers */ = {isa = PBXBuildFile; fileRef = F8D038982017127A00387B32 /* WanRegistView.h */; };
+		F8D0389B2017127A00387B32 /* WanRegistView.m in Sources */ = {isa = PBXBuildFile; fileRef = F8D038992017127A00387B32 /* WanRegistView.m */; };
+		F8D0389E201712CC00387B32 /* WanBaseView.h in Headers */ = {isa = PBXBuildFile; fileRef = F8D0389C201712CC00387B32 /* WanBaseView.h */; };
+		F8D0389F201712CC00387B32 /* WanBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = F8D0389D201712CC00387B32 /* WanBaseView.m */; };
+		F8D038A220171A9400387B32 /* WanModdifyPasswordViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = F8D038A020171A9400387B32 /* WanModdifyPasswordViewController.h */; };
+		F8D038A320171A9400387B32 /* WanModdifyPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8D038A120171A9400387B32 /* WanModdifyPasswordViewController.m */; };
+		F8D038A720171ADC00387B32 /* WanModdifyPasswordView.m in Sources */ = {isa = PBXBuildFile; fileRef = F8D038A520171ADC00387B32 /* WanModdifyPasswordView.m */; };
+		F8D038A820171ADC00387B32 /* WanModdifyPasswordView.h in Headers */ = {isa = PBXBuildFile; fileRef = F8D038A620171ADC00387B32 /* WanModdifyPasswordView.h */; };
+		F8D038AC201733B900387B32 /* WanPreventAddictionView.h in Headers */ = {isa = PBXBuildFile; fileRef = F8D038AA201733B900387B32 /* WanPreventAddictionView.h */; };
+		F8D038AD201733B900387B32 /* WanPreventAddictionView.m in Sources */ = {isa = PBXBuildFile; fileRef = F8D038AB201733B900387B32 /* WanPreventAddictionView.m */; };
+		F8D038B0201814C000387B32 /* WanBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F8D038AE201814C000387B32 /* WanBaseModel.m */; };
+		F8D038B1201814C000387B32 /* WanBaseModel.h in Headers */ = {isa = PBXBuildFile; fileRef = F8D038AF201814C000387B32 /* WanBaseModel.h */; };
+		F8D038B42018159200387B32 /* WanPopModel.h in Headers */ = {isa = PBXBuildFile; fileRef = F8D038B22018159200387B32 /* WanPopModel.h */; };
+		F8D038B52018159200387B32 /* WanPopModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F8D038B32018159200387B32 /* WanPopModel.m */; };
+		F8D038B720181A6200387B32 /* WanManagerDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = F8D038B620181A6200387B32 /* WanManagerDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F8D038BA20181D9E00387B32 /* WanPreventAddictionViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = F8D038B820181D9E00387B32 /* WanPreventAddictionViewController.h */; };
+		F8D038BB20181D9E00387B32 /* WanPreventAddictionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8D038B920181D9E00387B32 /* WanPreventAddictionViewController.m */; };
+		F8D038BE2019B8BA00387B32 /* WanPopViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = F8D038BC2019B8BA00387B32 /* WanPopViewController.h */; };
+		F8D038BF2019B8BA00387B32 /* WanPopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8D038BD2019B8BA00387B32 /* WanPopViewController.m */; };
+		F8D038C4201AD54000387B32 /* WanAccountModel.h in Headers */ = {isa = PBXBuildFile; fileRef = F8D038C2201AD54000387B32 /* WanAccountModel.h */; };
+		F8D038C5201AD54000387B32 /* WanAccountModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F8D038C3201AD54000387B32 /* WanAccountModel.m */; };
+		F8D038C9201FFC0400387B32 /* WanPopView.h in Headers */ = {isa = PBXBuildFile; fileRef = F8D038C7201FFC0400387B32 /* WanPopView.h */; };
+		F8D038CA201FFC0400387B32 /* WanPopView.m in Sources */ = {isa = PBXBuildFile; fileRef = F8D038C8201FFC0400387B32 /* WanPopView.m */; };
+		F8D038F7202001E100387B32 /* WanInAppPurchaes.h in Headers */ = {isa = PBXBuildFile; fileRef = F8D038EF202001E000387B32 /* WanInAppPurchaes.h */; };
+		F8D038F8202001E100387B32 /* WanInAppPurchaes.m in Sources */ = {isa = PBXBuildFile; fileRef = F8D038F0202001E000387B32 /* WanInAppPurchaes.m */; };
+		F8D038FB202001E100387B32 /* WanPayModel.h in Headers */ = {isa = PBXBuildFile; fileRef = F8D038F3202001E000387B32 /* WanPayModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F8D038FC202001E100387B32 /* WanPayModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F8D038F4202001E000387B32 /* WanPayModel.m */; };
+		F8D0390B2020608E00387B32 /* WanSplashScreenViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = F8D039092020608E00387B32 /* WanSplashScreenViewController.h */; };
+		F8D0390C2020608E00387B32 /* WanSplashScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8D0390A2020608E00387B32 /* WanSplashScreenViewController.m */; };
+		F8D039102020705600387B32 /* WanSDKConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = F8D0390E2020705600387B32 /* WanSDKConfig.h */; };
+		F8D039112020705600387B32 /* WanSDKConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = F8D0390F2020705600387B32 /* WanSDKConfig.m */; };
+		F8D03915202077F000387B32 /* WanTipView.m in Sources */ = {isa = PBXBuildFile; fileRef = F8D03913202077EF00387B32 /* WanTipView.m */; };
+		F8D03916202077F000387B32 /* WanTipView.h in Headers */ = {isa = PBXBuildFile; fileRef = F8D03914202077EF00387B32 /* WanTipView.h */; };
+		F8D0391A2020789800387B32 /* WanTipWebViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = F8D039182020789800387B32 /* WanTipWebViewController.h */; };
+		F8D0391B2020789800387B32 /* WanTipWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8D039192020789800387B32 /* WanTipWebViewController.m */; };
+		F8D0392620207C1400387B32 /* WanTipItemModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F8D0392420207C1400387B32 /* WanTipItemModel.m */; };
+		F8D0392720207C1400387B32 /* WanTipItemModel.h in Headers */ = {isa = PBXBuildFile; fileRef = F8D0392520207C1400387B32 /* WanTipItemModel.h */; };
+		F8D0392A20207DBF00387B32 /* WanTipWebview.h in Headers */ = {isa = PBXBuildFile; fileRef = F8D0392820207DBF00387B32 /* WanTipWebview.h */; };
+		F8D0392B20207DBF00387B32 /* WanTipWebview.m in Sources */ = {isa = PBXBuildFile; fileRef = F8D0392920207DBF00387B32 /* WanTipWebview.m */; };
+		F8D0392E20207EE300387B32 /* WanToolItemCell.h in Headers */ = {isa = PBXBuildFile; fileRef = F8D0392C20207EE300387B32 /* WanToolItemCell.h */; };
+		F8D0392F20207EE300387B32 /* WanToolItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F8D0392D20207EE300387B32 /* WanToolItemCell.m */; };
+		F8D0393220215C9E00387B32 /* WanTipPorWebViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = F8D0393020215C9E00387B32 /* WanTipPorWebViewController.h */; };
+		F8D0393320215C9E00387B32 /* WanTipPorWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8D0393120215C9E00387B32 /* WanTipPorWebViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F8D037A82015E6AA00387B32 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F8D037942015E6AA00387B32 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F8D0379C2015E6AA00387B32;
+			remoteInfo = SDK_51WanSY;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		F820A9D62021AAA200873CF4 /* NSString+Util.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Util.m"; sourceTree = "<group>"; };
+		F820A9D72021AAA400873CF4 /* NSString+Util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Util.h"; sourceTree = "<group>"; };
+		F820A9DE2022AAF300873CF4 /* WanTextField.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WanTextField.h; sourceTree = "<group>"; };
+		F820A9DF2022AAF300873CF4 /* WanTextField.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WanTextField.m; sourceTree = "<group>"; };
+		F820A9E72022ADD400873CF4 /* WanLabel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WanLabel.h; sourceTree = "<group>"; };
+		F820A9E82022ADD400873CF4 /* WanLabel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WanLabel.m; sourceTree = "<group>"; };
+		F820A9EB2022B24700873CF4 /* WanButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WanButton.h; sourceTree = "<group>"; };
+		F820A9EC2022B24700873CF4 /* WanButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WanButton.m; sourceTree = "<group>"; };
+		F8D0379D2015E6AA00387B32 /* SDK_51WanSY.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SDK_51WanSY.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F8D037A02015E6AA00387B32 /* SDK_51WanSY.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SDK_51WanSY.h; sourceTree = "<group>"; };
+		F8D037A12015E6AA00387B32 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F8D037A62015E6AA00387B32 /* SDK_51WanSYTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SDK_51WanSYTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F8D037D42015E9B700387B32 /* NSString+Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Base64.h"; sourceTree = "<group>"; };
+		F8D037D52015E9B700387B32 /* NSString+Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Base64.m"; sourceTree = "<group>"; };
+		F8D037D82015E9B700387B32 /* UIAlertView+Blocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertView+Blocks.h"; sourceTree = "<group>"; };
+		F8D037D92015E9B700387B32 /* UIAlertView+Blocks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertView+Blocks.m"; sourceTree = "<group>"; };
+		F8D037DA2015E9B700387B32 /* UIColor+Hex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Hex.h"; sourceTree = "<group>"; };
+		F8D037DB2015E9B700387B32 /* UIColor+Hex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Hex.m"; sourceTree = "<group>"; };
+		F8D037DC2015E9B700387B32 /* UIView+Frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Frame.h"; sourceTree = "<group>"; };
+		F8D037DD2015E9B700387B32 /* UIView+Frame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Frame.m"; sourceTree = "<group>"; };
+		F8D037E92015E9C300387B32 /* WanConstance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WanConstance.h; sourceTree = "<group>"; };
+		F8D037EA2015E9C300387B32 /* WanUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WanUtils.h; sourceTree = "<group>"; };
+		F8D037EB2015E9C300387B32 /* WanUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WanUtils.m; sourceTree = "<group>"; };
+		F8D037EF2015E9C300387B32 /* AFHTTPSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPSessionManager.h; sourceTree = "<group>"; };
+		F8D037F02015E9C300387B32 /* AFHTTPSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPSessionManager.m; sourceTree = "<group>"; };
+		F8D037F12015E9C300387B32 /* AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworking.h; sourceTree = "<group>"; };
+		F8D037F22015E9C300387B32 /* AFNetworkReachabilityManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworkReachabilityManager.h; sourceTree = "<group>"; };
+		F8D037F32015E9C300387B32 /* AFNetworkReachabilityManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFNetworkReachabilityManager.m; sourceTree = "<group>"; };
+		F8D037F42015E9C300387B32 /* AFSecurityPolicy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFSecurityPolicy.h; sourceTree = "<group>"; };
+		F8D037F52015E9C300387B32 /* AFSecurityPolicy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFSecurityPolicy.m; sourceTree = "<group>"; };
+		F8D037F62015E9C300387B32 /* AFURLRequestSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLRequestSerialization.h; sourceTree = "<group>"; };
+		F8D037F72015E9C300387B32 /* AFURLRequestSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLRequestSerialization.m; sourceTree = "<group>"; };
+		F8D037F82015E9C300387B32 /* AFURLResponseSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLResponseSerialization.h; sourceTree = "<group>"; };
+		F8D037F92015E9C300387B32 /* AFURLResponseSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLResponseSerialization.m; sourceTree = "<group>"; };
+		F8D037FA2015E9C300387B32 /* AFURLSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLSessionManager.h; sourceTree = "<group>"; };
+		F8D037FB2015E9C300387B32 /* AFURLSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLSessionManager.m; sourceTree = "<group>"; };
+		F8D037FD2015E9C300387B32 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		F8D037FE2015E9C300387B32 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		F8D037FF2015E9C300387B32 /* WanProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WanProgressHUD.h; sourceTree = "<group>"; };
+		F8D038002015E9C300387B32 /* WanProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WanProgressHUD.m; sourceTree = "<group>"; };
+		F8D038012015E9C300387B32 /* PPUIUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPUIUtils.h; sourceTree = "<group>"; };
+		F8D038022015E9C300387B32 /* PPUIUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPUIUtils.m; sourceTree = "<group>"; };
+		F8D038042015E9C300387B32 /* AFAutoPurgingImageCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFAutoPurgingImageCache.h; sourceTree = "<group>"; };
+		F8D038052015E9C300387B32 /* AFAutoPurgingImageCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFAutoPurgingImageCache.m; sourceTree = "<group>"; };
+		F8D038062015E9C300387B32 /* AFImageDownloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFImageDownloader.h; sourceTree = "<group>"; };
+		F8D038072015E9C300387B32 /* AFImageDownloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFImageDownloader.m; sourceTree = "<group>"; };
+		F8D038082015E9C300387B32 /* AFNetworkActivityIndicatorManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworkActivityIndicatorManager.h; sourceTree = "<group>"; };
+		F8D038092015E9C300387B32 /* AFNetworkActivityIndicatorManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFNetworkActivityIndicatorManager.m; sourceTree = "<group>"; };
+		F8D0380A2015E9C300387B32 /* UIActivityIndicatorView+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIActivityIndicatorView+AFNetworking.h"; sourceTree = "<group>"; };
+		F8D0380B2015E9C300387B32 /* UIActivityIndicatorView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIActivityIndicatorView+AFNetworking.m"; sourceTree = "<group>"; };
+		F8D0380C2015E9C300387B32 /* UIButton+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+AFNetworking.h"; sourceTree = "<group>"; };
+		F8D0380D2015E9C300387B32 /* UIButton+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+AFNetworking.m"; sourceTree = "<group>"; };
+		F8D0380E2015E9C300387B32 /* UIImage+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+AFNetworking.h"; sourceTree = "<group>"; };
+		F8D0380F2015E9C300387B32 /* UIImageView+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+AFNetworking.h"; sourceTree = "<group>"; };
+		F8D038102015E9C300387B32 /* UIImageView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+AFNetworking.m"; sourceTree = "<group>"; };
+		F8D038112015E9C300387B32 /* UIKit+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIKit+AFNetworking.h"; sourceTree = "<group>"; };
+		F8D038122015E9C300387B32 /* UIProgressView+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIProgressView+AFNetworking.h"; sourceTree = "<group>"; };
+		F8D038132015E9C300387B32 /* UIProgressView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIProgressView+AFNetworking.m"; sourceTree = "<group>"; };
+		F8D038142015E9C300387B32 /* UIRefreshControl+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIRefreshControl+AFNetworking.h"; sourceTree = "<group>"; };
+		F8D038152015E9C300387B32 /* UIRefreshControl+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIRefreshControl+AFNetworking.m"; sourceTree = "<group>"; };
+		F8D038162015E9C300387B32 /* UIWebView+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWebView+AFNetworking.h"; sourceTree = "<group>"; };
+		F8D038172015E9C300387B32 /* UIWebView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWebView+AFNetworking.m"; sourceTree = "<group>"; };
+		F8D038192015E9C300387B32 /* YRJSONAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YRJSONAdapter.h; sourceTree = "<group>"; };
+		F8D0381A2015E9C300387B32 /* YRJSONAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YRJSONAdapter.m; sourceTree = "<group>"; };
+		F8D0381C2015E9C300387B32 /* WanNetManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WanNetManager.h; sourceTree = "<group>"; };
+		F8D0381D2015E9C300387B32 /* WanNetManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WanNetManager.m; sourceTree = "<group>"; };
+		F8D0384E2015E9F900387B32 /* WanLoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WanLoginViewController.h; sourceTree = "<group>"; };
+		F8D0384F2015E9F900387B32 /* WanLoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WanLoginViewController.m; sourceTree = "<group>"; };
+		F8D038532015EA8C00387B32 /* WanBaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WanBaseViewController.h; sourceTree = "<group>"; };
+		F8D038542015EA8C00387B32 /* WanBaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WanBaseViewController.m; sourceTree = "<group>"; };
+		F8D0385A2015EDC900387B32 /* WanManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WanManager.h; sourceTree = "<group>"; };
+		F8D0385B2015EDC900387B32 /* WanManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WanManager.m; sourceTree = "<group>"; };
+		F8D038762016C40A00387B32 /* WanAccountCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WanAccountCell.m; sourceTree = "<group>"; };
+		F8D038772016C40A00387B32 /* WanAccountCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WanAccountCell.h; sourceTree = "<group>"; };
+		F8D0387A2016C6A300387B32 /* WanLoginView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WanLoginView.h; sourceTree = "<group>"; };
+		F8D0387B2016C6A400387B32 /* WanLoginView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WanLoginView.m; sourceTree = "<group>"; };
+		F8D0387E2016D92100387B32 /* WanServer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WanServer.h; sourceTree = "<group>"; };
+		F8D0387F2016D92100387B32 /* WanServer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WanServer.m; sourceTree = "<group>"; };
+		F8D038862016E24D00387B32 /* WanQuickRegestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WanQuickRegestViewController.h; sourceTree = "<group>"; };
+		F8D038872016E24D00387B32 /* WanQuickRegestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WanQuickRegestViewController.m; sourceTree = "<group>"; };
+		F8D0388B2016E28B00387B32 /* WanQuickRegestView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WanQuickRegestView.h; sourceTree = "<group>"; };
+		F8D0388C2016E28B00387B32 /* WanQuickRegestView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WanQuickRegestView.m; sourceTree = "<group>"; };
+		F8D038932017125800387B32 /* WanRegestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WanRegestViewController.h; sourceTree = "<group>"; };
+		F8D038942017125800387B32 /* WanRegestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WanRegestViewController.m; sourceTree = "<group>"; };
+		F8D038982017127A00387B32 /* WanRegistView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WanRegistView.h; sourceTree = "<group>"; };
+		F8D038992017127A00387B32 /* WanRegistView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WanRegistView.m; sourceTree = "<group>"; };
+		F8D0389C201712CC00387B32 /* WanBaseView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WanBaseView.h; sourceTree = "<group>"; };
+		F8D0389D201712CC00387B32 /* WanBaseView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WanBaseView.m; sourceTree = "<group>"; };
+		F8D038A020171A9400387B32 /* WanModdifyPasswordViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WanModdifyPasswordViewController.h; sourceTree = "<group>"; };
+		F8D038A120171A9400387B32 /* WanModdifyPasswordViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WanModdifyPasswordViewController.m; sourceTree = "<group>"; };
+		F8D038A520171ADC00387B32 /* WanModdifyPasswordView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WanModdifyPasswordView.m; sourceTree = "<group>"; };
+		F8D038A620171ADC00387B32 /* WanModdifyPasswordView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WanModdifyPasswordView.h; sourceTree = "<group>"; };
+		F8D038AA201733B900387B32 /* WanPreventAddictionView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WanPreventAddictionView.h; sourceTree = "<group>"; };
+		F8D038AB201733B900387B32 /* WanPreventAddictionView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WanPreventAddictionView.m; sourceTree = "<group>"; };
+		F8D038AE201814C000387B32 /* WanBaseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WanBaseModel.m; sourceTree = "<group>"; };
+		F8D038AF201814C000387B32 /* WanBaseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WanBaseModel.h; sourceTree = "<group>"; };
+		F8D038B22018159200387B32 /* WanPopModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WanPopModel.h; sourceTree = "<group>"; };
+		F8D038B32018159200387B32 /* WanPopModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WanPopModel.m; sourceTree = "<group>"; };
+		F8D038B620181A6200387B32 /* WanManagerDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WanManagerDelegate.h; sourceTree = "<group>"; };
+		F8D038B820181D9E00387B32 /* WanPreventAddictionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WanPreventAddictionViewController.h; sourceTree = "<group>"; };
+		F8D038B920181D9E00387B32 /* WanPreventAddictionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WanPreventAddictionViewController.m; sourceTree = "<group>"; };
+		F8D038BC2019B8BA00387B32 /* WanPopViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WanPopViewController.h; sourceTree = "<group>"; };
+		F8D038BD2019B8BA00387B32 /* WanPopViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WanPopViewController.m; sourceTree = "<group>"; };
+		F8D038C2201AD54000387B32 /* WanAccountModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WanAccountModel.h; sourceTree = "<group>"; };
+		F8D038C3201AD54000387B32 /* WanAccountModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WanAccountModel.m; sourceTree = "<group>"; };
+		F8D038C7201FFC0400387B32 /* WanPopView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WanPopView.h; sourceTree = "<group>"; };
+		F8D038C8201FFC0400387B32 /* WanPopView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WanPopView.m; sourceTree = "<group>"; };
+		F8D038EF202001E000387B32 /* WanInAppPurchaes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WanInAppPurchaes.h; sourceTree = "<group>"; };
+		F8D038F0202001E000387B32 /* WanInAppPurchaes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WanInAppPurchaes.m; sourceTree = "<group>"; };
+		F8D038F3202001E000387B32 /* WanPayModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WanPayModel.h; sourceTree = "<group>"; };
+		F8D038F4202001E000387B32 /* WanPayModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WanPayModel.m; sourceTree = "<group>"; };
+		F8D039092020608E00387B32 /* WanSplashScreenViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WanSplashScreenViewController.h; sourceTree = "<group>"; };
+		F8D0390A2020608E00387B32 /* WanSplashScreenViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WanSplashScreenViewController.m; sourceTree = "<group>"; };
+		F8D0390E2020705600387B32 /* WanSDKConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WanSDKConfig.h; sourceTree = "<group>"; };
+		F8D0390F2020705600387B32 /* WanSDKConfig.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WanSDKConfig.m; sourceTree = "<group>"; };
+		F8D03913202077EF00387B32 /* WanTipView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WanTipView.m; sourceTree = "<group>"; };
+		F8D03914202077EF00387B32 /* WanTipView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WanTipView.h; sourceTree = "<group>"; };
+		F8D039182020789800387B32 /* WanTipWebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WanTipWebViewController.h; sourceTree = "<group>"; };
+		F8D039192020789800387B32 /* WanTipWebViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WanTipWebViewController.m; sourceTree = "<group>"; };
+		F8D0392420207C1400387B32 /* WanTipItemModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WanTipItemModel.m; sourceTree = "<group>"; };
+		F8D0392520207C1400387B32 /* WanTipItemModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WanTipItemModel.h; sourceTree = "<group>"; };
+		F8D0392820207DBF00387B32 /* WanTipWebview.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WanTipWebview.h; sourceTree = "<group>"; };
+		F8D0392920207DBF00387B32 /* WanTipWebview.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WanTipWebview.m; sourceTree = "<group>"; };
+		F8D0392C20207EE300387B32 /* WanToolItemCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WanToolItemCell.h; sourceTree = "<group>"; };
+		F8D0392D20207EE300387B32 /* WanToolItemCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WanToolItemCell.m; sourceTree = "<group>"; };
+		F8D0393020215C9E00387B32 /* WanTipPorWebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WanTipPorWebViewController.h; sourceTree = "<group>"; };
+		F8D0393120215C9E00387B32 /* WanTipPorWebViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WanTipPorWebViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F8D037992015E6AA00387B32 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F8D037A32015E6AA00387B32 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F8D037A72015E6AA00387B32 /* SDK_51WanSY.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F820A9E22022AD7900873CF4 /* Commom */ = {
+			isa = PBXGroup;
+			children = (
+				F820A9DE2022AAF300873CF4 /* WanTextField.h */,
+				F820A9DF2022AAF300873CF4 /* WanTextField.m */,
+				F820A9E72022ADD400873CF4 /* WanLabel.h */,
+				F820A9E82022ADD400873CF4 /* WanLabel.m */,
+				F820A9EB2022B24700873CF4 /* WanButton.h */,
+				F820A9EC2022B24700873CF4 /* WanButton.m */,
+			);
+			path = Commom;
+			sourceTree = "<group>";
+		};
+		F8D037932015E6AA00387B32 = {
+			isa = PBXGroup;
+			children = (
+				F8D0379F2015E6AA00387B32 /* SDK_51WanSY */,
+				F8D0379E2015E6AA00387B32 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F8D0379E2015E6AA00387B32 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F8D0379D2015E6AA00387B32 /* SDK_51WanSY.framework */,
+				F8D037A62015E6AA00387B32 /* SDK_51WanSYTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F8D0379F2015E6AA00387B32 /* SDK_51WanSY */ = {
+			isa = PBXGroup;
+			children = (
+				F8D038B620181A6200387B32 /* WanManagerDelegate.h */,
+				F8D0390D2020703700387B32 /* Single */,
+				F8D039082020606A00387B32 /* SplashScreen */,
+				F8D037EC2015E9C300387B32 /* Controller */,
+				F8D0381E2015E9C300387B32 /* Model */,
+				F8D0381B2015E9C300387B32 /* Server */,
+				F8D037ED2015E9C300387B32 /* Third */,
+				F8D037E82015E9C300387B32 /* Utils */,
+				F8D0381F2015E9C300387B32 /* View */,
+				F8D037D32015E9B700387B32 /* Category */,
+				F8D037A02015E6AA00387B32 /* SDK_51WanSY.h */,
+				F8D037A12015E6AA00387B32 /* Info.plist */,
+			);
+			path = SDK_51WanSY;
+			sourceTree = "<group>";
+		};
+		F8D037D32015E9B700387B32 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				F820A9D72021AAA400873CF4 /* NSString+Util.h */,
+				F820A9D62021AAA200873CF4 /* NSString+Util.m */,
+				F8D037D42015E9B700387B32 /* NSString+Base64.h */,
+				F8D037D52015E9B700387B32 /* NSString+Base64.m */,
+				F8D037D82015E9B700387B32 /* UIAlertView+Blocks.h */,
+				F8D037D92015E9B700387B32 /* UIAlertView+Blocks.m */,
+				F8D037DA2015E9B700387B32 /* UIColor+Hex.h */,
+				F8D037DB2015E9B700387B32 /* UIColor+Hex.m */,
+				F8D037DC2015E9B700387B32 /* UIView+Frame.h */,
+				F8D037DD2015E9B700387B32 /* UIView+Frame.m */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		F8D037E82015E9C300387B32 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				F8D037E92015E9C300387B32 /* WanConstance.h */,
+				F8D037EA2015E9C300387B32 /* WanUtils.h */,
+				F8D037EB2015E9C300387B32 /* WanUtils.m */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		F8D037EC2015E9C300387B32 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F8D038532015EA8C00387B32 /* WanBaseViewController.h */,
+				F8D038542015EA8C00387B32 /* WanBaseViewController.m */,
+				F8D039172020784200387B32 /* TipWebViewController */,
+				F8D038C02019B8C100387B32 /* Pop */,
+				F8D038852016E21800387B32 /* BindInfo */,
+				F8D038842016E20300387B32 /* ModdifyPassword */,
+				F8D038832016E1F800387B32 /* QuickRegest */,
+				F8D038822016E1EF00387B32 /* Regest */,
+				F8D038522015EA1000387B32 /* Login */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		F8D037ED2015E9C300387B32 /* Third */ = {
+			isa = PBXGroup;
+			children = (
+				F8D037EE2015E9C300387B32 /* AFNetworking */,
+				F8D037FC2015E9C300387B32 /* MBProgressHUD */,
+				F8D038012015E9C300387B32 /* PPUIUtils.h */,
+				F8D038022015E9C300387B32 /* PPUIUtils.m */,
+				F8D038032015E9C300387B32 /* UIKit+AFNetworking */,
+				F8D038182015E9C300387B32 /* YRJSONAdapter */,
+			);
+			path = Third;
+			sourceTree = "<group>";
+		};
+		F8D037EE2015E9C300387B32 /* AFNetworking */ = {
+			isa = PBXGroup;
+			children = (
+				F8D037EF2015E9C300387B32 /* AFHTTPSessionManager.h */,
+				F8D037F02015E9C300387B32 /* AFHTTPSessionManager.m */,
+				F8D037F12015E9C300387B32 /* AFNetworking.h */,
+				F8D037F22015E9C300387B32 /* AFNetworkReachabilityManager.h */,
+				F8D037F32015E9C300387B32 /* AFNetworkReachabilityManager.m */,
+				F8D037F42015E9C300387B32 /* AFSecurityPolicy.h */,
+				F8D037F52015E9C300387B32 /* AFSecurityPolicy.m */,
+				F8D037F62015E9C300387B32 /* AFURLRequestSerialization.h */,
+				F8D037F72015E9C300387B32 /* AFURLRequestSerialization.m */,
+				F8D037F82015E9C300387B32 /* AFURLResponseSerialization.h */,
+				F8D037F92015E9C300387B32 /* AFURLResponseSerialization.m */,
+				F8D037FA2015E9C300387B32 /* AFURLSessionManager.h */,
+				F8D037FB2015E9C300387B32 /* AFURLSessionManager.m */,
+			);
+			path = AFNetworking;
+			sourceTree = "<group>";
+		};
+		F8D037FC2015E9C300387B32 /* MBProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				F8D037FD2015E9C300387B32 /* MBProgressHUD.h */,
+				F8D037FE2015E9C300387B32 /* MBProgressHUD.m */,
+				F8D037FF2015E9C300387B32 /* WanProgressHUD.h */,
+				F8D038002015E9C300387B32 /* WanProgressHUD.m */,
+			);
+			path = MBProgressHUD;
+			sourceTree = "<group>";
+		};
+		F8D038032015E9C300387B32 /* UIKit+AFNetworking */ = {
+			isa = PBXGroup;
+			children = (
+				F8D038042015E9C300387B32 /* AFAutoPurgingImageCache.h */,
+				F8D038052015E9C300387B32 /* AFAutoPurgingImageCache.m */,
+				F8D038062015E9C300387B32 /* AFImageDownloader.h */,
+				F8D038072015E9C300387B32 /* AFImageDownloader.m */,
+				F8D038082015E9C300387B32 /* AFNetworkActivityIndicatorManager.h */,
+				F8D038092015E9C300387B32 /* AFNetworkActivityIndicatorManager.m */,
+				F8D0380A2015E9C300387B32 /* UIActivityIndicatorView+AFNetworking.h */,
+				F8D0380B2015E9C300387B32 /* UIActivityIndicatorView+AFNetworking.m */,
+				F8D0380C2015E9C300387B32 /* UIButton+AFNetworking.h */,
+				F8D0380D2015E9C300387B32 /* UIButton+AFNetworking.m */,
+				F8D0380E2015E9C300387B32 /* UIImage+AFNetworking.h */,
+				F8D0380F2015E9C300387B32 /* UIImageView+AFNetworking.h */,
+				F8D038102015E9C300387B32 /* UIImageView+AFNetworking.m */,
+				F8D038112015E9C300387B32 /* UIKit+AFNetworking.h */,
+				F8D038122015E9C300387B32 /* UIProgressView+AFNetworking.h */,
+				F8D038132015E9C300387B32 /* UIProgressView+AFNetworking.m */,
+				F8D038142015E9C300387B32 /* UIRefreshControl+AFNetworking.h */,
+				F8D038152015E9C300387B32 /* UIRefreshControl+AFNetworking.m */,
+				F8D038162015E9C300387B32 /* UIWebView+AFNetworking.h */,
+				F8D038172015E9C300387B32 /* UIWebView+AFNetworking.m */,
+			);
+			path = "UIKit+AFNetworking";
+			sourceTree = "<group>";
+		};
+		F8D038182015E9C300387B32 /* YRJSONAdapter */ = {
+			isa = PBXGroup;
+			children = (
+				F8D038192015E9C300387B32 /* YRJSONAdapter.h */,
+				F8D0381A2015E9C300387B32 /* YRJSONAdapter.m */,
+			);
+			path = YRJSONAdapter;
+			sourceTree = "<group>";
+		};
+		F8D0381B2015E9C300387B32 /* Server */ = {
+			isa = PBXGroup;
+			children = (
+				F8D038EF202001E000387B32 /* WanInAppPurchaes.h */,
+				F8D038F0202001E000387B32 /* WanInAppPurchaes.m */,
+				F8D0381C2015E9C300387B32 /* WanNetManager.h */,
+				F8D0381D2015E9C300387B32 /* WanNetManager.m */,
+				F8D0387E2016D92100387B32 /* WanServer.h */,
+				F8D0387F2016D92100387B32 /* WanServer.m */,
+			);
+			path = Server;
+			sourceTree = "<group>";
+		};
+		F8D0381E2015E9C300387B32 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F8D038F3202001E000387B32 /* WanPayModel.h */,
+				F8D038F4202001E000387B32 /* WanPayModel.m */,
+				F8D038AF201814C000387B32 /* WanBaseModel.h */,
+				F8D038AE201814C000387B32 /* WanBaseModel.m */,
+				F8D038B22018159200387B32 /* WanPopModel.h */,
+				F8D038B32018159200387B32 /* WanPopModel.m */,
+				F8D038C2201AD54000387B32 /* WanAccountModel.h */,
+				F8D038C3201AD54000387B32 /* WanAccountModel.m */,
+				F8D0392520207C1400387B32 /* WanTipItemModel.h */,
+				F8D0392420207C1400387B32 /* WanTipItemModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F8D0381F2015E9C300387B32 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F8D0389C201712CC00387B32 /* WanBaseView.h */,
+				F8D0389D201712CC00387B32 /* WanBaseView.m */,
+				F820A9E22022AD7900873CF4 /* Commom */,
+				F8D03912202077DA00387B32 /* Tip */,
+				F8D038C6201FFB6400387B32 /* Pop */,
+				F8D038A9201732B000387B32 /* PreventAddiction */,
+				F8D038A420171AC600387B32 /* ModdifyPassword */,
+				F8D038972017126F00387B32 /* Regest */,
+				F8D0388A2016E26400387B32 /* QuickRegest */,
+				F8D0385F2015F2C100387B32 /* Login */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F8D038522015EA1000387B32 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				F8D0384E2015E9F900387B32 /* WanLoginViewController.h */,
+				F8D0384F2015E9F900387B32 /* WanLoginViewController.m */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		F8D0385F2015F2C100387B32 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				F8D0387A2016C6A300387B32 /* WanLoginView.h */,
+				F8D0387B2016C6A400387B32 /* WanLoginView.m */,
+				F8D038772016C40A00387B32 /* WanAccountCell.h */,
+				F8D038762016C40A00387B32 /* WanAccountCell.m */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		F8D038822016E1EF00387B32 /* Regest */ = {
+			isa = PBXGroup;
+			children = (
+				F8D038932017125800387B32 /* WanRegestViewController.h */,
+				F8D038942017125800387B32 /* WanRegestViewController.m */,
+			);
+			path = Regest;
+			sourceTree = "<group>";
+		};
+		F8D038832016E1F800387B32 /* QuickRegest */ = {
+			isa = PBXGroup;
+			children = (
+				F8D038862016E24D00387B32 /* WanQuickRegestViewController.h */,
+				F8D038872016E24D00387B32 /* WanQuickRegestViewController.m */,
+			);
+			path = QuickRegest;
+			sourceTree = "<group>";
+		};
+		F8D038842016E20300387B32 /* ModdifyPassword */ = {
+			isa = PBXGroup;
+			children = (
+				F8D038A020171A9400387B32 /* WanModdifyPasswordViewController.h */,
+				F8D038A120171A9400387B32 /* WanModdifyPasswordViewController.m */,
+			);
+			path = ModdifyPassword;
+			sourceTree = "<group>";
+		};
+		F8D038852016E21800387B32 /* BindInfo */ = {
+			isa = PBXGroup;
+			children = (
+				F8D038B820181D9E00387B32 /* WanPreventAddictionViewController.h */,
+				F8D038B920181D9E00387B32 /* WanPreventAddictionViewController.m */,
+			);
+			path = BindInfo;
+			sourceTree = "<group>";
+		};
+		F8D0388A2016E26400387B32 /* QuickRegest */ = {
+			isa = PBXGroup;
+			children = (
+				F8D0388B2016E28B00387B32 /* WanQuickRegestView.h */,
+				F8D0388C2016E28B00387B32 /* WanQuickRegestView.m */,
+			);
+			path = QuickRegest;
+			sourceTree = "<group>";
+		};
+		F8D038972017126F00387B32 /* Regest */ = {
+			isa = PBXGroup;
+			children = (
+				F8D038982017127A00387B32 /* WanRegistView.h */,
+				F8D038992017127A00387B32 /* WanRegistView.m */,
+			);
+			path = Regest;
+			sourceTree = "<group>";
+		};
+		F8D038A420171AC600387B32 /* ModdifyPassword */ = {
+			isa = PBXGroup;
+			children = (
+				F8D038A620171ADC00387B32 /* WanModdifyPasswordView.h */,
+				F8D038A520171ADC00387B32 /* WanModdifyPasswordView.m */,
+			);
+			path = ModdifyPassword;
+			sourceTree = "<group>";
+		};
+		F8D038A9201732B000387B32 /* PreventAddiction */ = {
+			isa = PBXGroup;
+			children = (
+				F8D038AA201733B900387B32 /* WanPreventAddictionView.h */,
+				F8D038AB201733B900387B32 /* WanPreventAddictionView.m */,
+			);
+			path = PreventAddiction;
+			sourceTree = "<group>";
+		};
+		F8D038C02019B8C100387B32 /* Pop */ = {
+			isa = PBXGroup;
+			children = (
+				F8D038BC2019B8BA00387B32 /* WanPopViewController.h */,
+				F8D038BD2019B8BA00387B32 /* WanPopViewController.m */,
+			);
+			path = Pop;
+			sourceTree = "<group>";
+		};
+		F8D038C6201FFB6400387B32 /* Pop */ = {
+			isa = PBXGroup;
+			children = (
+				F8D038C7201FFC0400387B32 /* WanPopView.h */,
+				F8D038C8201FFC0400387B32 /* WanPopView.m */,
+			);
+			path = Pop;
+			sourceTree = "<group>";
+		};
+		F8D039082020606A00387B32 /* SplashScreen */ = {
+			isa = PBXGroup;
+			children = (
+				F8D039092020608E00387B32 /* WanSplashScreenViewController.h */,
+				F8D0390A2020608E00387B32 /* WanSplashScreenViewController.m */,
+			);
+			path = SplashScreen;
+			sourceTree = "<group>";
+		};
+		F8D0390D2020703700387B32 /* Single */ = {
+			isa = PBXGroup;
+			children = (
+				F8D0385A2015EDC900387B32 /* WanManager.h */,
+				F8D0385B2015EDC900387B32 /* WanManager.m */,
+				F8D0390E2020705600387B32 /* WanSDKConfig.h */,
+				F8D0390F2020705600387B32 /* WanSDKConfig.m */,
+			);
+			path = Single;
+			sourceTree = "<group>";
+		};
+		F8D03912202077DA00387B32 /* Tip */ = {
+			isa = PBXGroup;
+			children = (
+				F8D0392C20207EE300387B32 /* WanToolItemCell.h */,
+				F8D0392D20207EE300387B32 /* WanToolItemCell.m */,
+				F8D0392820207DBF00387B32 /* WanTipWebview.h */,
+				F8D0392920207DBF00387B32 /* WanTipWebview.m */,
+				F8D03914202077EF00387B32 /* WanTipView.h */,
+				F8D03913202077EF00387B32 /* WanTipView.m */,
+			);
+			path = Tip;
+			sourceTree = "<group>";
+		};
+		F8D039172020784200387B32 /* TipWebViewController */ = {
+			isa = PBXGroup;
+			children = (
+				F8D039182020789800387B32 /* WanTipWebViewController.h */,
+				F8D039192020789800387B32 /* WanTipWebViewController.m */,
+				F8D0393020215C9E00387B32 /* WanTipPorWebViewController.h */,
+				F8D0393120215C9E00387B32 /* WanTipPorWebViewController.m */,
+			);
+			path = TipWebViewController;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		F8D0379A2015E6AA00387B32 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F8D0382E2015E9C300387B32 /* AFURLSessionManager.h in Headers */,
+				F8D038952017125800387B32 /* WanRegestViewController.h in Headers */,
+				F8D0382A2015E9C300387B32 /* AFURLRequestSerialization.h in Headers */,
+				F8D03916202077F000387B32 /* WanTipView.h in Headers */,
+				F8D0383A2015E9C400387B32 /* AFNetworkActivityIndicatorManager.h in Headers */,
+				F8D0385C2015EDC900387B32 /* WanManager.h in Headers */,
+				F8D038B720181A6200387B32 /* WanManagerDelegate.h in Headers */,
+				F8D038382015E9C400387B32 /* AFImageDownloader.h in Headers */,
+				F8D0384C2015E9C400387B32 /* WanNetManager.h in Headers */,
+				F8D038882016E24D00387B32 /* WanQuickRegestViewController.h in Headers */,
+				F8D037E22015E9B700387B32 /* UIAlertView+Blocks.h in Headers */,
+				F8D038B42018159200387B32 /* WanPopModel.h in Headers */,
+				F8D0384A2015E9C400387B32 /* YRJSONAdapter.h in Headers */,
+				F8D038A820171ADC00387B32 /* WanModdifyPasswordView.h in Headers */,
+				F8D038802016D92100387B32 /* WanServer.h in Headers */,
+				F8D037E42015E9B700387B32 /* UIColor+Hex.h in Headers */,
+				F8D037AE2015E6AA00387B32 /* SDK_51WanSY.h in Headers */,
+				F8D038482015E9C400387B32 /* UIWebView+AFNetworking.h in Headers */,
+				F820A9E02022AAF300873CF4 /* WanTextField.h in Headers */,
+				F8D0393220215C9E00387B32 /* WanTipPorWebViewController.h in Headers */,
+				F8D0392E20207EE300387B32 /* WanToolItemCell.h in Headers */,
+				F8D038282015E9C300387B32 /* AFSecurityPolicy.h in Headers */,
+				F8D0391A2020789800387B32 /* WanTipWebViewController.h in Headers */,
+				F8D038552015EA8C00387B32 /* WanBaseViewController.h in Headers */,
+				F8D0389E201712CC00387B32 /* WanBaseView.h in Headers */,
+				F8D038792016C40A00387B32 /* WanAccountCell.h in Headers */,
+				F8D038502015E9F900387B32 /* WanLoginViewController.h in Headers */,
+				F8D038202015E9C300387B32 /* WanConstance.h in Headers */,
+				F8D0389A2017127A00387B32 /* WanRegistView.h in Headers */,
+				F8D038442015E9C400387B32 /* UIProgressView+AFNetworking.h in Headers */,
+				F8D037DE2015E9B700387B32 /* NSString+Base64.h in Headers */,
+				F8D038BE2019B8BA00387B32 /* WanPopViewController.h in Headers */,
+				F8D038A220171A9400387B32 /* WanModdifyPasswordViewController.h in Headers */,
+				F8D038412015E9C400387B32 /* UIImageView+AFNetworking.h in Headers */,
+				F8D038C9201FFC0400387B32 /* WanPopView.h in Headers */,
+				F8D038F7202001E100387B32 /* WanInAppPurchaes.h in Headers */,
+				F8D038AC201733B900387B32 /* WanPreventAddictionView.h in Headers */,
+				F8D037E62015E9B700387B32 /* UIView+Frame.h in Headers */,
+				F820A9E92022ADD400873CF4 /* WanLabel.h in Headers */,
+				F8D038362015E9C400387B32 /* AFAutoPurgingImageCache.h in Headers */,
+				F8D038302015E9C400387B32 /* MBProgressHUD.h in Headers */,
+				F8D038B1201814C000387B32 /* WanBaseModel.h in Headers */,
+				F8D0390B2020608E00387B32 /* WanSplashScreenViewController.h in Headers */,
+				F8D038212015E9C300387B32 /* WanUtils.h in Headers */,
+				F8D039102020705600387B32 /* WanSDKConfig.h in Headers */,
+				F8D038402015E9C400387B32 /* UIImage+AFNetworking.h in Headers */,
+				F820A9D92021AAA400873CF4 /* NSString+Util.h in Headers */,
+				F8D0387C2016C6A400387B32 /* WanLoginView.h in Headers */,
+				F820A9ED2022B24700873CF4 /* WanButton.h in Headers */,
+				F8D0383E2015E9C400387B32 /* UIButton+AFNetworking.h in Headers */,
+				F8D0388D2016E28B00387B32 /* WanQuickRegestView.h in Headers */,
+				F8D038342015E9C400387B32 /* PPUIUtils.h in Headers */,
+				F8D038232015E9C300387B32 /* AFHTTPSessionManager.h in Headers */,
+				F8D038462015E9C400387B32 /* UIRefreshControl+AFNetworking.h in Headers */,
+				F8D0382C2015E9C300387B32 /* AFURLResponseSerialization.h in Headers */,
+				F8D038322015E9C400387B32 /* WanProgressHUD.h in Headers */,
+				F8D0383C2015E9C400387B32 /* UIActivityIndicatorView+AFNetworking.h in Headers */,
+				F8D038252015E9C300387B32 /* AFNetworking.h in Headers */,
+				F8D038432015E9C400387B32 /* UIKit+AFNetworking.h in Headers */,
+				F8D038FB202001E100387B32 /* WanPayModel.h in Headers */,
+				F8D038262015E9C300387B32 /* AFNetworkReachabilityManager.h in Headers */,
+				F8D0392720207C1400387B32 /* WanTipItemModel.h in Headers */,
+				F8D038BA20181D9E00387B32 /* WanPreventAddictionViewController.h in Headers */,
+				F8D038C4201AD54000387B32 /* WanAccountModel.h in Headers */,
+				F8D0392A20207DBF00387B32 /* WanTipWebview.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		F8D0379C2015E6AA00387B32 /* SDK_51WanSY */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F8D037B12015E6AA00387B32 /* Build configuration list for PBXNativeTarget "SDK_51WanSY" */;
+			buildPhases = (
+				F8D037982015E6AA00387B32 /* Sources */,
+				F8D037992015E6AA00387B32 /* Frameworks */,
+				F8D0379A2015E6AA00387B32 /* Headers */,
+				F8D0379B2015E6AA00387B32 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SDK_51WanSY;
+			productName = SDK_51WanSY;
+			productReference = F8D0379D2015E6AA00387B32 /* SDK_51WanSY.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		F8D037A52015E6AA00387B32 /* SDK_51WanSYTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F8D037B42015E6AA00387B32 /* Build configuration list for PBXNativeTarget "SDK_51WanSYTests" */;
+			buildPhases = (
+				F8D037A22015E6AA00387B32 /* Sources */,
+				F8D037A32015E6AA00387B32 /* Frameworks */,
+				F8D037A42015E6AA00387B32 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F8D037A92015E6AA00387B32 /* PBXTargetDependency */,
+			);
+			name = SDK_51WanSYTests;
+			productName = SDK_51WanSYTests;
+			productReference = F8D037A62015E6AA00387B32 /* SDK_51WanSYTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F8D037942015E6AA00387B32 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = Wan;
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = Star;
+				TargetAttributes = {
+					F8D0379C2015E6AA00387B32 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					F8D037A52015E6AA00387B32 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = F8D037972015E6AA00387B32 /* Build configuration list for PBXProject "SDK_51WanSY" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = F8D037932015E6AA00387B32;
+			productRefGroup = F8D0379E2015E6AA00387B32 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F8D0379C2015E6AA00387B32 /* SDK_51WanSY */,
+				F8D037A52015E6AA00387B32 /* SDK_51WanSYTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F8D0379B2015E6AA00387B32 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F8D037A42015E6AA00387B32 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F8D037982015E6AA00387B32 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F8D038812016D92100387B32 /* WanServer.m in Sources */,
+				F8D038472015E9C400387B32 /* UIRefreshControl+AFNetworking.m in Sources */,
+				F8D038C5201AD54000387B32 /* WanAccountModel.m in Sources */,
+				F820A9D82021AAA400873CF4 /* NSString+Util.m in Sources */,
+				F8D0389F201712CC00387B32 /* WanBaseView.m in Sources */,
+				F8D038892016E24D00387B32 /* WanQuickRegestViewController.m in Sources */,
+				F8D0389B2017127A00387B32 /* WanRegistView.m in Sources */,
+				F8D0392B20207DBF00387B32 /* WanTipWebview.m in Sources */,
+				F8D037E32015E9B700387B32 /* UIAlertView+Blocks.m in Sources */,
+				F8D038B52018159200387B32 /* WanPopModel.m in Sources */,
+				F8D038A320171A9400387B32 /* WanModdifyPasswordViewController.m in Sources */,
+				F8D038292015E9C300387B32 /* AFSecurityPolicy.m in Sources */,
+				F820A9E12022AAF300873CF4 /* WanTextField.m in Sources */,
+				F8D0388E2016E28B00387B32 /* WanQuickRegestView.m in Sources */,
+				F8D038BF2019B8BA00387B32 /* WanPopViewController.m in Sources */,
+				F8D0385D2015EDC900387B32 /* WanManager.m in Sources */,
+				F8D038962017125800387B32 /* WanRegestViewController.m in Sources */,
+				F8D038452015E9C400387B32 /* UIProgressView+AFNetworking.m in Sources */,
+				F8D037E52015E9B700387B32 /* UIColor+Hex.m in Sources */,
+				F820A9EA2022ADD400873CF4 /* WanLabel.m in Sources */,
+				F8D038FC202001E100387B32 /* WanPayModel.m in Sources */,
+				F8D038B0201814C000387B32 /* WanBaseModel.m in Sources */,
+				F8D038F8202001E100387B32 /* WanInAppPurchaes.m in Sources */,
+				F8D0384B2015E9C400387B32 /* YRJSONAdapter.m in Sources */,
+				F8D038562015EA8C00387B32 /* WanBaseViewController.m in Sources */,
+				F8D038392015E9C400387B32 /* AFImageDownloader.m in Sources */,
+				F8D038BB20181D9E00387B32 /* WanPreventAddictionViewController.m in Sources */,
+				F8D038782016C40A00387B32 /* WanAccountCell.m in Sources */,
+				F8D038AD201733B900387B32 /* WanPreventAddictionView.m in Sources */,
+				F8D038CA201FFC0400387B32 /* WanPopView.m in Sources */,
+				F8D0393320215C9E00387B32 /* WanTipPorWebViewController.m in Sources */,
+				F8D038222015E9C300387B32 /* WanUtils.m in Sources */,
+				F8D0382D2015E9C300387B32 /* AFURLResponseSerialization.m in Sources */,
+				F8D03915202077F000387B32 /* WanTipView.m in Sources */,
+				F8D0383F2015E9C400387B32 /* UIButton+AFNetworking.m in Sources */,
+				F8D037DF2015E9B700387B32 /* NSString+Base64.m in Sources */,
+				F8D038352015E9C400387B32 /* PPUIUtils.m in Sources */,
+				F8D039112020705600387B32 /* WanSDKConfig.m in Sources */,
+				F8D0383D2015E9C400387B32 /* UIActivityIndicatorView+AFNetworking.m in Sources */,
+				F8D0383B2015E9C400387B32 /* AFNetworkActivityIndicatorManager.m in Sources */,
+				F8D0392F20207EE300387B32 /* WanToolItemCell.m in Sources */,
+				F8D038372015E9C400387B32 /* AFAutoPurgingImageCache.m in Sources */,
+				F820A9EE2022B24700873CF4 /* WanButton.m in Sources */,
+				F8D037E72015E9B700387B32 /* UIView+Frame.m in Sources */,
+				F8D038242015E9C300387B32 /* AFHTTPSessionManager.m in Sources */,
+				F8D038512015E9F900387B32 /* WanLoginViewController.m in Sources */,
+				F8D0382B2015E9C300387B32 /* AFURLRequestSerialization.m in Sources */,
+				F8D038332015E9C400387B32 /* WanProgressHUD.m in Sources */,
+				F8D038312015E9C400387B32 /* MBProgressHUD.m in Sources */,
+				F8D0387D2016C6A400387B32 /* WanLoginView.m in Sources */,
+				F8D0382F2015E9C400387B32 /* AFURLSessionManager.m in Sources */,
+				F8D0392620207C1400387B32 /* WanTipItemModel.m in Sources */,
+				F8D0391B2020789800387B32 /* WanTipWebViewController.m in Sources */,
+				F8D0390C2020608E00387B32 /* WanSplashScreenViewController.m in Sources */,
+				F8D038492015E9C400387B32 /* UIWebView+AFNetworking.m in Sources */,
+				F8D0384D2015E9C400387B32 /* WanNetManager.m in Sources */,
+				F8D038A720171ADC00387B32 /* WanModdifyPasswordView.m in Sources */,
+				F8D038272015E9C300387B32 /* AFNetworkReachabilityManager.m in Sources */,
+				F8D038422015E9C400387B32 /* UIImageView+AFNetworking.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F8D037A22015E6AA00387B32 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F8D037A92015E6AA00387B32 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F8D0379C2015E6AA00387B32 /* SDK_51WanSY */;
+			targetProxy = F8D037A82015E6AA00387B32 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		F8D037AF2015E6AA00387B32 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		F8D037B02015E6AA00387B32 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		F8D037B22015E6AA00387B32 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/SDK_51WanSY/Utils/WanConstance.h";
+				INFOPLIST_FILE = SDK_51WanSY/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = "-Wno-objc-protocol-method-implementation";
+				PRODUCT_BUNDLE_IDENTIFIER = com.669.test;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F8D037B32015E6AA00387B32 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/SDK_51WanSY/Utils/WanConstance.h";
+				INFOPLIST_FILE = SDK_51WanSY/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				OTHER_LDFLAGS = "-Wno-objc-protocol-method-implementation";
+				PRODUCT_BUNDLE_IDENTIFIER = com.669.test;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		F8D037B52015E6AA00387B32 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = SDK_51WanSYTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = "-69.SDK-51WanSYTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F8D037B62015E6AA00387B32 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = SDK_51WanSYTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = "-69.SDK-51WanSYTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F8D037972015E6AA00387B32 /* Build configuration list for PBXProject "SDK_51WanSY" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F8D037AF2015E6AA00387B32 /* Debug */,
+				F8D037B02015E6AA00387B32 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F8D037B12015E6AA00387B32 /* Build configuration list for PBXNativeTarget "SDK_51WanSY" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F8D037B22015E6AA00387B32 /* Debug */,
+				F8D037B32015E6AA00387B32 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F8D037B42015E6AA00387B32 /* Build configuration list for PBXNativeTarget "SDK_51WanSYTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F8D037B52015E6AA00387B32 /* Debug */,
+				F8D037B62015E6AA00387B32 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F8D037942015E6AA00387B32 /* Project object */;
+}

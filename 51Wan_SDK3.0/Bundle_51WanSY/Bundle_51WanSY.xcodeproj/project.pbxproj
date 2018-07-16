@@ -1,0 +1,400 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F85AB5042011E2DD00082087 /* close_btn.png in Resources */ = {isa = PBXBuildFile; fileRef = F85AB4E62011E2D200082087 /* close_btn.png */; };
+		F85AB5052011E2DD00082087 /* delete.png in Resources */ = {isa = PBXBuildFile; fileRef = F85AB4E72011E2D200082087 /* delete.png */; };
+		F85AB5062011E2DD00082087 /* gift.png in Resources */ = {isa = PBXBuildFile; fileRef = F85AB4E82011E2D200082087 /* gift.png */; };
+		F85AB5072011E2DD00082087 /* wxPay.png in Resources */ = {isa = PBXBuildFile; fileRef = F85AB4E92011E2D200082087 /* wxPay.png */; };
+		F85AB5082011E2DD00082087 /* start.png in Resources */ = {isa = PBXBuildFile; fileRef = F85AB4EA2011E2D300082087 /* start.png */; };
+		F85AB5092011E2DD00082087 /* pra_server_down.png in Resources */ = {isa = PBXBuildFile; fileRef = F85AB4EB2011E2D300082087 /* pra_server_down.png */; };
+		F85AB50A2011E2DD00082087 /* down.png in Resources */ = {isa = PBXBuildFile; fileRef = F85AB4EC2011E2D300082087 /* down.png */; };
+		F85AB50B2011E2DD00082087 /* my_down.png in Resources */ = {isa = PBXBuildFile; fileRef = F85AB4ED2011E2D400082087 /* my_down.png */; };
+		F85AB50C2011E2DD00082087 /* my.png in Resources */ = {isa = PBXBuildFile; fileRef = F85AB4EE2011E2D400082087 /* my.png */; };
+		F85AB50D2011E2DD00082087 /* raiders.png in Resources */ = {isa = PBXBuildFile; fileRef = F85AB4EF2011E2D400082087 /* raiders.png */; };
+		F85AB50E2011E2DD00082087 /* wan_icon_goback.png in Resources */ = {isa = PBXBuildFile; fileRef = F85AB4F02011E2D400082087 /* wan_icon_goback.png */; };
+		F85AB50F2011E2DD00082087 /* config.plist in Resources */ = {isa = PBXBuildFile; fileRef = F85AB4F12011E2D400082087 /* config.plist */; };
+		F85AB5102011E2DD00082087 /* pra_server.png in Resources */ = {isa = PBXBuildFile; fileRef = F85AB4F22011E2D500082087 /* pra_server.png */; };
+		F85AB5112011E2DD00082087 /* pra_raiders_down.png in Resources */ = {isa = PBXBuildFile; fileRef = F85AB4F32011E2D500082087 /* pra_raiders_down.png */; };
+		F85AB5122011E2DD00082087 /* pay_close.png in Resources */ = {isa = PBXBuildFile; fileRef = F85AB4F42011E2D600082087 /* pay_close.png */; };
+		F85AB5132011E2DD00082087 /* up.png in Resources */ = {isa = PBXBuildFile; fileRef = F85AB4F52011E2D600082087 /* up.png */; };
+		F85AB5142011E2DD00082087 /* pra_gift_down.png in Resources */ = {isa = PBXBuildFile; fileRef = F85AB4F62011E2D600082087 /* pra_gift_down.png */; };
+		F85AB5152011E2DD00082087 /* pra_my.png in Resources */ = {isa = PBXBuildFile; fileRef = F85AB4F72011E2D700082087 /* pra_my.png */; };
+		F85AB5162011E2DD00082087 /* pra_gift.png in Resources */ = {isa = PBXBuildFile; fileRef = F85AB4F82011E2D700082087 /* pra_gift.png */; };
+		F85AB5172011E2DD00082087 /* center.png in Resources */ = {isa = PBXBuildFile; fileRef = F85AB4F92011E2D800082087 /* center.png */; };
+		F85AB5182011E2DD00082087 /* pra_my_down.png in Resources */ = {isa = PBXBuildFile; fileRef = F85AB4FA2011E2D800082087 /* pra_my_down.png */; };
+		F85AB5192011E2DD00082087 /* raiders_down.png in Resources */ = {isa = PBXBuildFile; fileRef = F85AB4FB2011E2D900082087 /* raiders_down.png */; };
+		F85AB51A2011E2DD00082087 /* tip_image.png in Resources */ = {isa = PBXBuildFile; fileRef = F85AB4FC2011E2D900082087 /* tip_image.png */; };
+		F85AB51B2011E2DD00082087 /* server.png in Resources */ = {isa = PBXBuildFile; fileRef = F85AB4FD2011E2D900082087 /* server.png */; };
+		F85AB51C2011E2DD00082087 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = F85AB4FE2011E2DA00082087 /* icon.png */; };
+		F85AB51D2011E2DD00082087 /* tip_nav.png in Resources */ = {isa = PBXBuildFile; fileRef = F85AB4FF2011E2DA00082087 /* tip_nav.png */; };
+		F85AB51E2011E2DD00082087 /* pra_raiders.png in Resources */ = {isa = PBXBuildFile; fileRef = F85AB5002011E2DA00082087 /* pra_raiders.png */; };
+		F85AB51F2011E2DD00082087 /* gift_down.png in Resources */ = {isa = PBXBuildFile; fileRef = F85AB5012011E2DB00082087 /* gift_down.png */; };
+		F85AB5202011E2DD00082087 /* pra_back.png in Resources */ = {isa = PBXBuildFile; fileRef = F85AB5022011E2DC00082087 /* pra_back.png */; };
+		F85AB5212011E2DD00082087 /* server_down.png in Resources */ = {isa = PBXBuildFile; fileRef = F85AB5032011E2DD00082087 /* server_down.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		F8131E4F1FFB188100AC077A /* Bundle_51WanSY.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Bundle_51WanSY.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		F85AB4E62011E2D200082087 /* close_btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = close_btn.png; sourceTree = "<group>"; };
+		F85AB4E72011E2D200082087 /* delete.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = delete.png; sourceTree = "<group>"; };
+		F85AB4E82011E2D200082087 /* gift.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gift.png; sourceTree = "<group>"; };
+		F85AB4E92011E2D200082087 /* wxPay.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wxPay.png; sourceTree = "<group>"; };
+		F85AB4EA2011E2D300082087 /* start.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = start.png; sourceTree = "<group>"; };
+		F85AB4EB2011E2D300082087 /* pra_server_down.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pra_server_down.png; sourceTree = "<group>"; };
+		F85AB4EC2011E2D300082087 /* down.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = down.png; sourceTree = "<group>"; };
+		F85AB4ED2011E2D400082087 /* my_down.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = my_down.png; sourceTree = "<group>"; };
+		F85AB4EE2011E2D400082087 /* my.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = my.png; sourceTree = "<group>"; };
+		F85AB4EF2011E2D400082087 /* raiders.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = raiders.png; sourceTree = "<group>"; };
+		F85AB4F02011E2D400082087 /* wan_icon_goback.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wan_icon_goback.png; sourceTree = "<group>"; };
+		F85AB4F12011E2D400082087 /* config.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = config.plist; sourceTree = "<group>"; };
+		F85AB4F22011E2D500082087 /* pra_server.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pra_server.png; sourceTree = "<group>"; };
+		F85AB4F32011E2D500082087 /* pra_raiders_down.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pra_raiders_down.png; sourceTree = "<group>"; };
+		F85AB4F42011E2D600082087 /* pay_close.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pay_close.png; sourceTree = "<group>"; };
+		F85AB4F52011E2D600082087 /* up.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = up.png; sourceTree = "<group>"; };
+		F85AB4F62011E2D600082087 /* pra_gift_down.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pra_gift_down.png; sourceTree = "<group>"; };
+		F85AB4F72011E2D700082087 /* pra_my.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pra_my.png; sourceTree = "<group>"; };
+		F85AB4F82011E2D700082087 /* pra_gift.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pra_gift.png; sourceTree = "<group>"; };
+		F85AB4F92011E2D800082087 /* center.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = center.png; sourceTree = "<group>"; };
+		F85AB4FA2011E2D800082087 /* pra_my_down.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pra_my_down.png; sourceTree = "<group>"; };
+		F85AB4FB2011E2D900082087 /* raiders_down.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = raiders_down.png; sourceTree = "<group>"; };
+		F85AB4FC2011E2D900082087 /* tip_image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tip_image.png; sourceTree = "<group>"; };
+		F85AB4FD2011E2D900082087 /* server.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = server.png; sourceTree = "<group>"; };
+		F85AB4FE2011E2DA00082087 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+		F85AB4FF2011E2DA00082087 /* tip_nav.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tip_nav.png; sourceTree = "<group>"; };
+		F85AB5002011E2DA00082087 /* pra_raiders.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pra_raiders.png; sourceTree = "<group>"; };
+		F85AB5012011E2DB00082087 /* gift_down.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gift_down.png; sourceTree = "<group>"; };
+		F85AB5022011E2DC00082087 /* pra_back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pra_back.png; sourceTree = "<group>"; };
+		F85AB5032011E2DD00082087 /* server_down.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = server_down.png; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F8131E4C1FFB188100AC077A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F8131E461FFB188100AC077A = {
+			isa = PBXGroup;
+			children = (
+				F8131E511FFB188100AC077A /* Bundle_51WanSY */,
+				F8131E501FFB188100AC077A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F8131E501FFB188100AC077A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F8131E4F1FFB188100AC077A /* Bundle_51WanSY.bundle */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F8131E511FFB188100AC077A /* Bundle_51WanSY */ = {
+			isa = PBXGroup;
+			children = (
+				F85AB4F92011E2D800082087 /* center.png */,
+				F85AB4E62011E2D200082087 /* close_btn.png */,
+				F85AB4F12011E2D400082087 /* config.plist */,
+				F85AB4E72011E2D200082087 /* delete.png */,
+				F85AB4EC2011E2D300082087 /* down.png */,
+				F85AB5012011E2DB00082087 /* gift_down.png */,
+				F85AB4E82011E2D200082087 /* gift.png */,
+				F85AB4FE2011E2DA00082087 /* icon.png */,
+				F85AB4ED2011E2D400082087 /* my_down.png */,
+				F85AB4EE2011E2D400082087 /* my.png */,
+				F85AB4F42011E2D600082087 /* pay_close.png */,
+				F85AB5022011E2DC00082087 /* pra_back.png */,
+				F85AB4F62011E2D600082087 /* pra_gift_down.png */,
+				F85AB4F82011E2D700082087 /* pra_gift.png */,
+				F85AB4FA2011E2D800082087 /* pra_my_down.png */,
+				F85AB4F72011E2D700082087 /* pra_my.png */,
+				F85AB4F32011E2D500082087 /* pra_raiders_down.png */,
+				F85AB5002011E2DA00082087 /* pra_raiders.png */,
+				F85AB4EB2011E2D300082087 /* pra_server_down.png */,
+				F85AB4F22011E2D500082087 /* pra_server.png */,
+				F85AB4FB2011E2D900082087 /* raiders_down.png */,
+				F85AB4EF2011E2D400082087 /* raiders.png */,
+				F85AB5032011E2DD00082087 /* server_down.png */,
+				F85AB4FD2011E2D900082087 /* server.png */,
+				F85AB4EA2011E2D300082087 /* start.png */,
+				F85AB4FC2011E2D900082087 /* tip_image.png */,
+				F85AB4FF2011E2DA00082087 /* tip_nav.png */,
+				F85AB4F52011E2D600082087 /* up.png */,
+				F85AB4F02011E2D400082087 /* wan_icon_goback.png */,
+				F85AB4E92011E2D200082087 /* wxPay.png */,
+			);
+			path = Bundle_51WanSY;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F8131E4E1FFB188100AC077A /* Bundle_51WanSY */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F8131E551FFB188100AC077A /* Build configuration list for PBXNativeTarget "Bundle_51WanSY" */;
+			buildPhases = (
+				F8131E4B1FFB188100AC077A /* Sources */,
+				F8131E4C1FFB188100AC077A /* Frameworks */,
+				F8131E4D1FFB188100AC077A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Bundle_51WanSY;
+			productName = Bundle_51WanSY;
+			productReference = F8131E4F1FFB188100AC077A /* Bundle_51WanSY.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F8131E471FFB188100AC077A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = Star;
+				TargetAttributes = {
+					F8131E4E1FFB188100AC077A = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = F8131E4A1FFB188100AC077A /* Build configuration list for PBXProject "Bundle_51WanSY" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = F8131E461FFB188100AC077A;
+			productRefGroup = F8131E501FFB188100AC077A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F8131E4E1FFB188100AC077A /* Bundle_51WanSY */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F8131E4D1FFB188100AC077A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F85AB5052011E2DD00082087 /* delete.png in Resources */,
+				F85AB5152011E2DD00082087 /* pra_my.png in Resources */,
+				F85AB50E2011E2DD00082087 /* wan_icon_goback.png in Resources */,
+				F85AB50C2011E2DD00082087 /* my.png in Resources */,
+				F85AB5162011E2DD00082087 /* pra_gift.png in Resources */,
+				F85AB51F2011E2DD00082087 /* gift_down.png in Resources */,
+				F85AB5212011E2DD00082087 /* server_down.png in Resources */,
+				F85AB51A2011E2DD00082087 /* tip_image.png in Resources */,
+				F85AB5072011E2DD00082087 /* wxPay.png in Resources */,
+				F85AB50A2011E2DD00082087 /* down.png in Resources */,
+				F85AB50D2011E2DD00082087 /* raiders.png in Resources */,
+				F85AB50B2011E2DD00082087 /* my_down.png in Resources */,
+				F85AB5102011E2DD00082087 /* pra_server.png in Resources */,
+				F85AB5142011E2DD00082087 /* pra_gift_down.png in Resources */,
+				F85AB51B2011E2DD00082087 /* server.png in Resources */,
+				F85AB5082011E2DD00082087 /* start.png in Resources */,
+				F85AB5192011E2DD00082087 /* raiders_down.png in Resources */,
+				F85AB50F2011E2DD00082087 /* config.plist in Resources */,
+				F85AB5112011E2DD00082087 /* pra_raiders_down.png in Resources */,
+				F85AB5202011E2DD00082087 /* pra_back.png in Resources */,
+				F85AB5042011E2DD00082087 /* close_btn.png in Resources */,
+				F85AB5092011E2DD00082087 /* pra_server_down.png in Resources */,
+				F85AB5062011E2DD00082087 /* gift.png in Resources */,
+				F85AB5182011E2DD00082087 /* pra_my_down.png in Resources */,
+				F85AB51E2011E2DD00082087 /* pra_raiders.png in Resources */,
+				F85AB51C2011E2DD00082087 /* icon.png in Resources */,
+				F85AB5132011E2DD00082087 /* up.png in Resources */,
+				F85AB5172011E2DD00082087 /* center.png in Resources */,
+				F85AB5122011E2DD00082087 /* pay_close.png in Resources */,
+				F85AB51D2011E2DD00082087 /* tip_nav.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F8131E4B1FFB188100AC077A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		F8131E531FFB188100AC077A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		F8131E541FFB188100AC077A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		F8131E561FFB188100AC077A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = HW9U4B8YY9;
+				INFOPLIST_FILE = Bundle_51WanSY/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				PRODUCT_BUNDLE_IDENTIFIER = "liuluoxing.Bundle-51WanSY";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		F8131E571FFB188100AC077A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = HW9U4B8YY9;
+				INFOPLIST_FILE = Bundle_51WanSY/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				PRODUCT_BUNDLE_IDENTIFIER = "liuluoxing.Bundle-51WanSY";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F8131E4A1FFB188100AC077A /* Build configuration list for PBXProject "Bundle_51WanSY" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F8131E531FFB188100AC077A /* Debug */,
+				F8131E541FFB188100AC077A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F8131E551FFB188100AC077A /* Build configuration list for PBXNativeTarget "Bundle_51WanSY" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F8131E561FFB188100AC077A /* Debug */,
+				F8131E571FFB188100AC077A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F8131E471FFB188100AC077A /* Project object */;
+}
