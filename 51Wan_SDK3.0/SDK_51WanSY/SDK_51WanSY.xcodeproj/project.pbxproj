@@ -15,6 +15,8 @@
 		F820A9EA2022ADD400873CF4 /* WanLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = F820A9E82022ADD400873CF4 /* WanLabel.m */; };
 		F820A9ED2022B24700873CF4 /* WanButton.h in Headers */ = {isa = PBXBuildFile; fileRef = F820A9EB2022B24700873CF4 /* WanButton.h */; };
 		F820A9EE2022B24700873CF4 /* WanButton.m in Sources */ = {isa = PBXBuildFile; fileRef = F820A9EC2022B24700873CF4 /* WanButton.m */; };
+		F83CC4A5211160E9003ABA88 /* UILabel+AttributeTextTapAction.h in Headers */ = {isa = PBXBuildFile; fileRef = F83CC4A3211160E9003ABA88 /* UILabel+AttributeTextTapAction.h */; };
+		F83CC4A6211160E9003ABA88 /* UILabel+AttributeTextTapAction.m in Sources */ = {isa = PBXBuildFile; fileRef = F83CC4A4211160E9003ABA88 /* UILabel+AttributeTextTapAction.m */; };
 		F8D037A72015E6AA00387B32 /* SDK_51WanSY.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8D0379D2015E6AA00387B32 /* SDK_51WanSY.framework */; };
 		F8D037AE2015E6AA00387B32 /* SDK_51WanSY.h in Headers */ = {isa = PBXBuildFile; fileRef = F8D037A02015E6AA00387B32 /* SDK_51WanSY.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F8D037DE2015E9B700387B32 /* NSString+Base64.h in Headers */ = {isa = PBXBuildFile; fileRef = F8D037D42015E9B700387B32 /* NSString+Base64.h */; };
@@ -153,6 +155,8 @@
 		F820A9E82022ADD400873CF4 /* WanLabel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WanLabel.m; sourceTree = "<group>"; };
 		F820A9EB2022B24700873CF4 /* WanButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WanButton.h; sourceTree = "<group>"; };
 		F820A9EC2022B24700873CF4 /* WanButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WanButton.m; sourceTree = "<group>"; };
+		F83CC4A3211160E9003ABA88 /* UILabel+AttributeTextTapAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+AttributeTextTapAction.h"; sourceTree = "<group>"; };
+		F83CC4A4211160E9003ABA88 /* UILabel+AttributeTextTapAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+AttributeTextTapAction.m"; sourceTree = "<group>"; };
 		F8D0379D2015E6AA00387B32 /* SDK_51WanSY.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SDK_51WanSY.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8D037A02015E6AA00387B32 /* SDK_51WanSY.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SDK_51WanSY.h; sourceTree = "<group>"; };
 		F8D037A12015E6AA00387B32 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -306,6 +310,15 @@
 			path = Commom;
 			sourceTree = "<group>";
 		};
+		F83CC4A2211160E9003ABA88 /* AttributeTextTapAction */ = {
+			isa = PBXGroup;
+			children = (
+				F83CC4A3211160E9003ABA88 /* UILabel+AttributeTextTapAction.h */,
+				F83CC4A4211160E9003ABA88 /* UILabel+AttributeTextTapAction.m */,
+			);
+			path = AttributeTextTapAction;
+			sourceTree = "<group>";
+		};
 		F8D037932015E6AA00387B32 = {
 			isa = PBXGroup;
 			children = (
@@ -388,6 +401,7 @@
 		F8D037ED2015E9C300387B32 /* Third */ = {
 			isa = PBXGroup;
 			children = (
+				F83CC4A2211160E9003ABA88 /* AttributeTextTapAction */,
 				F8D037EE2015E9C300387B32 /* AFNetworking */,
 				F8D037FC2015E9C300387B32 /* MBProgressHUD */,
 				F8D038012015E9C300387B32 /* PPUIUtils.h */,
@@ -731,6 +745,7 @@
 				F8D038322015E9C400387B32 /* WanProgressHUD.h in Headers */,
 				F8D0383C2015E9C400387B32 /* UIActivityIndicatorView+AFNetworking.h in Headers */,
 				F8D038252015E9C300387B32 /* AFNetworking.h in Headers */,
+				F83CC4A5211160E9003ABA88 /* UILabel+AttributeTextTapAction.h in Headers */,
 				F8D038432015E9C400387B32 /* UIKit+AFNetworking.h in Headers */,
 				F8D038FB202001E100387B32 /* WanPayModel.h in Headers */,
 				F8D038262015E9C300387B32 /* AFNetworkReachabilityManager.h in Headers */,
@@ -873,6 +888,7 @@
 				F8D0393320215C9E00387B32 /* WanTipPorWebViewController.m in Sources */,
 				F8D038222015E9C300387B32 /* WanUtils.m in Sources */,
 				F8D0382D2015E9C300387B32 /* AFURLResponseSerialization.m in Sources */,
+				F83CC4A6211160E9003ABA88 /* UILabel+AttributeTextTapAction.m in Sources */,
 				F8D03915202077F000387B32 /* WanTipView.m in Sources */,
 				F8D0383F2015E9C400387B32 /* UIButton+AFNetworking.m in Sources */,
 				F8D037DF2015E9B700387B32 /* NSString+Base64.m in Sources */,

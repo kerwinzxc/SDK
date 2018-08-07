@@ -14,7 +14,7 @@
     if (self = [super initWithFrame:frame]) {
         self.textAlignment = NSTextAlignmentLeft;
         self.text = title;
-        self.font = [UIFont systemFontOfSize:12];
+        self.font = [UIFont systemFontOfSize:15];
         self.textColor = WanWhiteColor;
     }
     return self;

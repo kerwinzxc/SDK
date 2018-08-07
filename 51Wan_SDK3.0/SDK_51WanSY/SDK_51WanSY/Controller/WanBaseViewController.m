@@ -16,15 +16,8 @@
 
 @implementation WanBaseViewController
 
--(instancetype)init{
-    if (self = [super init]) {
-        //设置控制器半透明
-        UIColor *color = [UIColor blackColor];
-        self.view.backgroundColor = [color colorWithAlphaComponent:0.65];
-        self.modalPresentationStyle = UIModalPresentationOverCurrentContext;
-    }
-    return self;
-}
+
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];

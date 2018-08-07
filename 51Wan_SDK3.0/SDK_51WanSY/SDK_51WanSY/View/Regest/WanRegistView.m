@@ -7,11 +7,13 @@
 //
 
 #import "WanRegistView.h"
+#import "UILabel+AttributeTextTapAction.h"
 
 @interface WanRegistView()<UITextFieldDelegate>
 {
     WanTextField *_accountTextField;//手机号
     WanTextField *_pdTextField;//验证码
+    UIButton * _agreeBtn;//勾选框
 }
 
 @end
@@ -53,9 +55,50 @@
     WanButton *loginBtn = [[WanButton alloc] initWithFrame:CGRectMake(_pdTextField.left, _pdTextField.bottom+30*kRetio, _pdTextField.width, 44*kRetio) title:@"注册" target:self action:@selector(regist:) titleFoneSize:16.0 titleColor:WanWhiteColor bgColor:WanButtonBgColor];
     [self addSubview:loginBtn];
 
+    //协议选项
+    NSString *str = @"我同意我要玩手游《新用户协议》";
+    CGSize size = [str sizeWithAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIFont systemFontOfSize:12], NSFontAttributeName, nil]];
+    //勾选框
+    _agreeBtn = [[UIButton alloc] initWithFrame:CGRectMake((self.width-size.width-25)/2.0, loginBtn.bottom + 15, 15, 15)];
+    [_agreeBtn setImage:[WanUtils imageInBundelWithName:@"unselected"] forState:UIControlStateNormal];
+    [_agreeBtn setImage:[WanUtils imageInBundelWithName:@"selected"] forState:UIControlStateSelected];
+    [_agreeBtn setSelected:YES];
+    [_agreeBtn addTarget:self action:@selector(click:) forControlEvents:UIControlEventTouchUpInside];
+    [self addSubview:_agreeBtn];
+    
+    NSMutableAttributedString *attrStr = [[NSMutableAttributedString alloc] initWithString:str];
+    [attrStr addAttribute:NSForegroundColorAttributeName value:[UIColor colorWithHexString:@"#00a0e9"] range:NSMakeRange(8, 7)];
+    [attrStr addAttribute:NSForegroundColorAttributeName value:[UIColor colorWithHexString:@"#aba9ab"] range:NSMakeRange(0, 8)];
+    UILabel *agreeLabel = [[UILabel alloc] initWithFrame:CGRectMake(_agreeBtn.right+3, _agreeBtn.top, size.width, 25)];
+    agreeLabel.centerY = _agreeBtn.centerY;
+    agreeLabel.textAlignment = NSTextAlignmentCenter;
+    agreeLabel.attributedText = attrStr;
+    agreeLabel.font = [UIFont systemFontOfSize:12];
+    [agreeLabel yb_addAttributeTapActionWithStrings:@[@"《新用户协议》"] tapClicked:^(NSString *string, NSRange range, NSInteger index) {
+        if ([NSString isNotEmpty:[WanSDKConfig shareInstance].dealUrl]) {
+            [[UIApplication sharedApplication] openURL:[NSURL URLWithString:[WanSDKConfig shareInstance].dealUrl]];
+        }
+    }];
+    [self addSubview:agreeLabel];
+    
     //返回登录
-    WanButton *backLoginBtn = [[WanButton alloc] initWithFrame:CGRectMake(loginBtn.left, loginBtn.bottom+15*kRetio, loginBtn.width, 25.0) title:@"返回登录" image:[WanUtils imageInBundelWithName:@"back"] imgSize:CGSizeMake(15, 15) target:self action:@selector(backToLogin:) titleFoneSize:15.0 titleColor:WanWhiteColor bgColor:[UIColor clearColor]];
-    [self addSubview:backLoginBtn];
+    str = @"返回登录";
+    size = [str sizeWithAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIFont systemFontOfSize:15], NSFontAttributeName, nil]];
+    
+    UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake((self.width-size.width-15)/2.0, agreeLabel.bottom+15*kRetio, 15, 15)];
+    imageView.userInteractionEnabled = YES;
+    imageView.image = [WanUtils imageInBundelWithName:@"back"];
+    [self addSubview:imageView];
+    
+    UILabel *backLabel = [[UILabel alloc] initWithFrame:CGRectMake(imageView.right+3, imageView.top, size.width, imageView.height)];
+    backLabel.text = str;
+    backLabel.textColor = [UIColor whiteColor];
+    backLabel.font = [UIFont systemFontOfSize:15];
+    [self addSubview:backLabel];
+    
+    UIButton *control = [[UIButton alloc] initWithFrame:CGRectMake(imageView.left, imageView.top-5, imageView.width+backLabel.width, imageView.height+10)];
+    [control addTarget:self action:@selector(backToLogin) forControlEvents:UIControlEventTouchUpInside];
+    [self addSubview:control];
 }
 
 #pragma btn acction
@@ -66,6 +109,9 @@
         return;
     }else if ([NSString isEmpty:_pdTextField.text]){
         [WanProgressHUD showFailure:@"请先输入密码"];
+        return;
+    }else if (!_agreeBtn.selected){
+        [WanProgressHUD showFailure:@"请先确认新用户协议"];
         return;
     }
     //开始注册
@@ -78,7 +124,7 @@
 }
 
 //返回登录
--(void)backToLogin:(UIButton *)btn{
+-(void)backToLogin{
     if (self.delegate && [_delegate respondsToSelector:@selector(viewClickActionType:withAccountModel:)]) {
         [_delegate viewClickActionType:ClickButtonTypeGotoLogin withAccountModel:nil];
     }
@@ -92,6 +138,10 @@
     }else {
         _pdTextField.secureTextEntry = YES;
     }
+}
+
+-(void)click:(UIButton *)btn{
+    btn.selected = !btn.isSelected;
 }
 
 #pragma mark --<UITextFieldDelegate>

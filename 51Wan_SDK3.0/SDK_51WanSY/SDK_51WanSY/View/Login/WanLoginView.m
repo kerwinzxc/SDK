@@ -43,7 +43,7 @@
     [self addSubview:title];
     
     //关闭按钮
-    WanButton *closeBtn = [[WanButton alloc] initCloseBtnWithFrame:CGRectMake(self.width-12-WanCloseBtnMargin, WanCloseBtnMargin, 12, 12) target:self action:@selector(close:)];
+    WanButton *closeBtn = [[WanButton alloc] initCloseBtnWithFrame:CGRectMake(self.width-WanCloseBtnWidth-WanCloseBtnMargin, WanCloseBtnMargin, WanCloseBtnWidth, WanCloseBtnWidth) target:self action:@selector(close:)];
     [self addSubview:closeBtn];
     
     //分割线条
@@ -54,7 +54,7 @@
     _accountTextField = [[WanTextField alloc] initWithFrame:CGRectMake(WanTextFieldLeftMargin, line.bottom+20*kRetio, self.width-2*WanTextFieldLeftMargin, WanTextFieldHeight*kRetio)];
     [_accountTextField setPlaceHolder:@"请输入您的用户名"];
     [_accountTextField setLeftViewWithImageName:@"account"];
-    _chooseAccountBtn = [_accountTextField setChooseBtnWithImage:[WanUtils imageInBundelWithName:@"down"] selectedImage:[WanUtils imageInBundelWithName:@"up"] target:self action:@selector(chooseAccount:)];
+    _chooseAccountBtn = [_accountTextField setChooseBtnWithImage:[WanUtils imageInBundelWithName:@"up"] selectedImage:[WanUtils imageInBundelWithName:@"down"] target:self action:@selector(chooseAccount:)];
     _accountTextField.delegate = self;
     [self addSubview:_accountTextField];
     
@@ -72,12 +72,12 @@
     _passwordTextField.text = rencentModel.password;
     
     //忘记密码
-    WanButton *frogetBtn = [[WanButton alloc] initWithFrame:CGRectMake(_passwordTextField.left, _passwordTextField.bottom+10*kRetio, _passwordTextField.width/2.0, 16*kRetio) title:@"忘记密码？" target:self action:@selector(forgetPd:) titleFoneSize:10.0 titleColor:WanButtonTitleColor bgColor:[UIColor clearColor]];
+    WanButton *frogetBtn = [[WanButton alloc] initWithFrame:CGRectMake(_passwordTextField.left, _passwordTextField.bottom+10*kRetio, _passwordTextField.width/2.0, 16*kRetio) title:@"忘记密码？" target:self action:@selector(forgetPd:) titleFoneSize:13.0 titleColor:WanButtonTitleColor bgColor:[UIColor clearColor]];
     frogetBtn.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;
     [self addSubview:frogetBtn];
     
     //注册新账号
-    WanButton *registBtn = [[WanButton alloc] initWithFrame:CGRectMake(frogetBtn.right, frogetBtn.top, frogetBtn.width, frogetBtn.height) title:@"新注册" target:self action:@selector(regist:) titleFoneSize:10.0 titleColor:WanButtonTitleColor bgColor:[UIColor clearColor]];
+    WanButton *registBtn = [[WanButton alloc] initWithFrame:CGRectMake(frogetBtn.right, frogetBtn.top, frogetBtn.width, frogetBtn.height) title:@"新注册" target:self action:@selector(regist:) titleFoneSize:13.0 titleColor:WanButtonTitleColor bgColor:[UIColor clearColor]];
     registBtn.contentHorizontalAlignment = UIControlContentHorizontalAlignmentRight;
     registBtn.hidden = ![WanSDKConfig shareInstance].isRegister;
     [self addSubview:registBtn];
@@ -87,12 +87,23 @@
     [self addSubview:loginBtn];
     
     //快速试玩
-    CGSize imgsize = CGSizeMake(14, 14);
-    WanButton *quickRegestBtn = [[WanButton alloc] initWithFrame:CGRectMake(loginBtn.left, loginBtn.bottom+15*kRetio, loginBtn.width, 15.0) title:@"一键注册" image:[WanUtils imageInBundelWithName:@"start"] imgSize:imgsize target:self action:@selector(qucikRegest:) titleFoneSize:15.0 titleColor:WanWhiteColor bgColor:[UIColor clearColor]];
-    CGFloat titleWidth = [NSString calculateRowWidth:@"一键注册" fontSize:15.0];
-    quickRegestBtn.titleEdgeInsets = UIEdgeInsetsMake(0, -imgsize.width, 0, imgsize.width);
-    quickRegestBtn.imageEdgeInsets = UIEdgeInsetsMake(0,titleWidth,0,-titleWidth);
-    [self addSubview:quickRegestBtn];
+    NSString *str = @"一键注册";
+    CGSize size = [str sizeWithAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIFont systemFontOfSize:15], NSFontAttributeName, nil]];
+    
+    UILabel *quickRegestLabel = [[UILabel alloc] initWithFrame:CGRectMake((self.width-size.width-15)/2.0, loginBtn.bottom+15*kRetio, size.width, 15)];
+    quickRegestLabel.text = str;
+    quickRegestLabel.textColor = [UIColor whiteColor];
+    quickRegestLabel.font = [UIFont systemFontOfSize:15];
+    [self addSubview:quickRegestLabel];
+    
+    UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(quickRegestLabel.right+3, quickRegestLabel.top, 15, 15)];
+    imageView.userInteractionEnabled = YES;
+    imageView.image = [WanUtils imageInBundelWithName:@"start"];
+    [self addSubview:imageView];
+    
+    UIButton *control = [[UIButton alloc] initWithFrame:CGRectMake(quickRegestLabel.left, quickRegestLabel.top-5, imageView.width+quickRegestLabel.width, imageView.height+10)];
+    [control addTarget:self action:@selector(qucikRegest:) forControlEvents:UIControlEventTouchUpInside];
+    [self addSubview:control];
 }
 
 #pragma mark --getter

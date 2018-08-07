@@ -31,7 +31,7 @@
     headImgView.image = [WanUtils imageInBundelWithName:@"notice-icon"];
     [self addSubview:headImgView];
     //关闭按钮
-    WanButton *closeBtn = [[WanButton alloc] initCloseBtnWithFrame:CGRectMake(self.width-12-WanCloseBtnMargin, WanCloseBtnMargin, 12, 12) target:self action:@selector(close:)];
+    WanButton *closeBtn = [[WanButton alloc] initCloseBtnWithFrame:CGRectMake(self.width-WanCloseBtnWidth-WanCloseBtnMargin, WanCloseBtnMargin, WanCloseBtnWidth, WanCloseBtnWidth) target:self action:@selector(close:)];
     [self addSubview:closeBtn];
     //线条
     UILabel *lineLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 95*kRetio, self.width, 1)];

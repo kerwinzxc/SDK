@@ -60,12 +60,23 @@
     [self addSubview:screenShotBtn];
     
     //快速试玩
-    CGSize imgsize = CGSizeMake(15, 15);
-    WanButton *quickPlayBtn = [[WanButton alloc] initWithFrame:CGRectMake(screenShotBtn.left, screenShotBtn.bottom+15*kRetio, screenShotBtn.width, 25.0) title:@"快速试玩" image:[WanUtils imageInBundelWithName:@"start"] imgSize:imgsize target:self action:@selector(startPlay:) titleFoneSize:15.0 titleColor:WanWhiteColor bgColor:[UIColor clearColor]];
-    CGFloat titleWidth = [NSString calculateRowWidth:@"快速试玩" fontSize:15.0];
-    quickPlayBtn.titleEdgeInsets = UIEdgeInsetsMake(0, -imgsize.width, 0, imgsize.width);
-    quickPlayBtn.imageEdgeInsets = UIEdgeInsetsMake(0,titleWidth,0,-titleWidth);
-    [self addSubview:quickPlayBtn];
+    NSString *str = @"快速试玩";
+    CGSize size = [str sizeWithAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIFont systemFontOfSize:15], NSFontAttributeName, nil]];
+    
+    UILabel *quickRegestLabel = [[UILabel alloc] initWithFrame:CGRectMake((self.width-size.width-15)/2.0, screenShotBtn.bottom+15*kRetio, size.width, 15)];
+    quickRegestLabel.text = str;
+    quickRegestLabel.textColor = [UIColor whiteColor];
+    quickRegestLabel.font = [UIFont systemFontOfSize:15];
+    [self addSubview:quickRegestLabel];
+    
+    UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(quickRegestLabel.right+3, quickRegestLabel.top, 15, 15)];
+    imageView.userInteractionEnabled = YES;
+    imageView.image = [WanUtils imageInBundelWithName:@"start"];
+    [self addSubview:imageView];
+    
+    UIButton *control = [[UIButton alloc] initWithFrame:CGRectMake(quickRegestLabel.left, quickRegestLabel.top-5, imageView.width+quickRegestLabel.width, imageView.height+10)];
+    [control addTarget:self action:@selector(startPlay:) forControlEvents:UIControlEventTouchUpInside];
+    [self addSubview:control];
 }
 
 #pragma mark ---截屏

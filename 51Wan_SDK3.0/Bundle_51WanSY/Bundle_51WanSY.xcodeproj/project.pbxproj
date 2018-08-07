@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F83CC4AC21118F4A003ABA88 /* unselected.png in Resources */ = {isa = PBXBuildFile; fileRef = F83CC4AB21118F4A003ABA88 /* unselected.png */; };
+		F83CC4AE21118F53003ABA88 /* selected.png in Resources */ = {isa = PBXBuildFile; fileRef = F83CC4AD21118F53003ABA88 /* selected.png */; };
 		F85AB5042011E2DD00082087 /* close_btn.png in Resources */ = {isa = PBXBuildFile; fileRef = F85AB4E62011E2D200082087 /* close_btn.png */; };
 		F85AB5052011E2DD00082087 /* delete.png in Resources */ = {isa = PBXBuildFile; fileRef = F85AB4E72011E2D200082087 /* delete.png */; };
 		F85AB5062011E2DD00082087 /* gift.png in Resources */ = {isa = PBXBuildFile; fileRef = F85AB4E82011E2D200082087 /* gift.png */; };
@@ -41,6 +43,8 @@
 
 /* Begin PBXFileReference section */
 		F8131E4F1FFB188100AC077A /* Bundle_51WanSY.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Bundle_51WanSY.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		F83CC4AB21118F4A003ABA88 /* unselected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = unselected.png; sourceTree = "<group>"; };
+		F83CC4AD21118F53003ABA88 /* selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = selected.png; sourceTree = "<group>"; };
 		F85AB4E62011E2D200082087 /* close_btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = close_btn.png; sourceTree = "<group>"; };
 		F85AB4E72011E2D200082087 /* delete.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = delete.png; sourceTree = "<group>"; };
 		F85AB4E82011E2D200082087 /* gift.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gift.png; sourceTree = "<group>"; };
@@ -103,6 +107,8 @@
 		F8131E511FFB188100AC077A /* Bundle_51WanSY */ = {
 			isa = PBXGroup;
 			children = (
+				F83CC4AD21118F53003ABA88 /* selected.png */,
+				F83CC4AB21118F4A003ABA88 /* unselected.png */,
 				F85AB4F92011E2D800082087 /* center.png */,
 				F85AB4E62011E2D200082087 /* close_btn.png */,
 				F85AB4F12011E2D400082087 /* config.plist */,
@@ -202,11 +208,13 @@
 				F85AB51F2011E2DD00082087 /* gift_down.png in Resources */,
 				F85AB5212011E2DD00082087 /* server_down.png in Resources */,
 				F85AB51A2011E2DD00082087 /* tip_image.png in Resources */,
+				F83CC4AC21118F4A003ABA88 /* unselected.png in Resources */,
 				F85AB5072011E2DD00082087 /* wxPay.png in Resources */,
 				F85AB50A2011E2DD00082087 /* down.png in Resources */,
 				F85AB50D2011E2DD00082087 /* raiders.png in Resources */,
 				F85AB50B2011E2DD00082087 /* my_down.png in Resources */,
 				F85AB5102011E2DD00082087 /* pra_server.png in Resources */,
+				F83CC4AE21118F53003ABA88 /* selected.png in Resources */,
 				F85AB5142011E2DD00082087 /* pra_gift_down.png in Resources */,
 				F85AB51B2011E2DD00082087 /* server.png in Resources */,
 				F85AB5082011E2DD00082087 /* start.png in Resources */,

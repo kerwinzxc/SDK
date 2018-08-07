@@ -30,7 +30,7 @@ typedef void(^LoginCompleteBlock)(WanAccountModel *accountModel, NSDictionary *r
 
 #pragma mark ---------------颜色------------------
 //按钮背景颜色(蓝色)
-#define WanButtonBgColor [UIColor colorWithHexString:@"01b0cd"]
+#define WanButtonBgColor [UIColor colorWithHexString:@"00a0e9"]
 //按钮title颜色(蓝色)
 #define WanButtonTitleColor [UIColor colorWithHexString:@"00a0e9"]
 //字体颜色(纯白色)
@@ -42,11 +42,12 @@ typedef void(^LoginCompleteBlock)(WanAccountModel *accountModel, NSDictionary *r
 
 #pragma mark ---------------间隔距离------------------
 //关闭按钮上右间隔
-#define WanCloseBtnMargin 5
+#define WanCloseBtnMargin 8
 //上下两个输入框之间间隔
 #define WanTextFieldMargin 10
 //输入框距离左右之间间隔
 #define WanTextFieldLeftMargin 20
+
 #pragma mark ---------------view宽与高------------------
 //输入框高度
 #define WanTextFieldHeight 44.0
@@ -56,7 +57,8 @@ typedef void(^LoginCompleteBlock)(WanAccountModel *accountModel, NSDictionary *r
 #define WanLineLabelHeight 1.0
 //弹窗view的宽度
 #define WanViewWidth 305.0
-
+//关闭按钮的宽高
+#define WanCloseBtnWidth 14.0
 
 #define SYSTEM_VERSION [[[UIDevice currentDevice] systemVersion] floatValue]
 

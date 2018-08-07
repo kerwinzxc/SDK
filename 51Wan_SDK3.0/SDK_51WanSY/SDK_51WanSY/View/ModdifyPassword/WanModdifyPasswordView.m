@@ -37,7 +37,7 @@
     [self addSubview:title];
     
     //关闭按钮
-    WanButton *closeBtn = [[WanButton alloc] initCloseBtnWithFrame:CGRectMake(self.width-12-WanCloseBtnMargin, WanCloseBtnMargin, 12, 12) target:self action:@selector(close:)];
+    WanButton *closeBtn = [[WanButton alloc] initCloseBtnWithFrame:CGRectMake(self.width-WanCloseBtnWidth-WanCloseBtnMargin, WanCloseBtnMargin, WanCloseBtnWidth, WanCloseBtnWidth) target:self action:@selector(close:)];
     [self addSubview:closeBtn];
     
     //分割线条

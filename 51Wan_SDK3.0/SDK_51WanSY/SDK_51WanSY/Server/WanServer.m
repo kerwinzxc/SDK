@@ -246,7 +246,6 @@
     [params setObject:service forKey:@"service"];
     NSTimeInterval time = [[NSDate date] timeIntervalSince1970];
     [params setObject:[NSString stringWithFormat:@"%.0f", time] forKey:@"time"];
-    
     NSString *dataStr = [WanUtils ascendingFieldForDic:data];
     NSString *sign = [NSString stringWithFormat:@"%@%@%@%@", service, [NSString stringWithFormat:@"%.0f", time], dataStr,SecretKey] ;
     [params setObject:[[NSString md5:sign] lowercaseStringWithLocale:[NSLocale currentLocale]] forKey:@"sign"];
@@ -266,5 +265,38 @@
         faield(error);
     }];
 }
+
+//获取网络北京时间
+- (NSDate *)getInternetDate
+{
+    NSString *urlString = @"http://m.baidu.com";
+    urlString = [urlString stringByAddingPercentEscapesUsingEncoding: NSUTF8StringEncoding];
+    NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init];
+    [request setURL:[NSURL URLWithString: urlString]];
+    [request setCachePolicy:NSURLRequestReloadIgnoringCacheData];
+    [request setTimeoutInterval: 2];
+    [request setHTTPShouldHandleCookies:FALSE];
+    [request setHTTPMethod:@"GET"];
+    NSHTTPURLResponse *response;
+    [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:nil];
+    
+    NSString *date = [[response allHeaderFields] objectForKey:@"Date"];
+    date = [date substringFromIndex:5];
+    date = [date substringToIndex:[date length]-4];
+    NSDateFormatter *dMatter = [[NSDateFormatter alloc] init];
+    dMatter.locale = [[NSLocale alloc] initWithLocaleIdentifier:@"en_US"];
+    [dMatter setDateFormat:@"dd MMM yyyy HH:mm:ss"];
+    NSDate *netDate = [[dMatter dateFromString:date] dateByAddingTimeInterval:60*60*8];
+    
+    NSTimeZone *zone = [NSTimeZone systemTimeZone];
+    NSInteger interval = [zone secondsFromGMTForDate: netDate];
+    NSDate *localeDate = [netDate  dateByAddingTimeInterval: interval];
+    
+    NSTimeZone *localZone = [NSTimeZone localTimeZone];
+    NSTimeZone *systemZone = [NSTimeZone systemTimeZone];
+    
+    return localeDate;
+}
+
 
 @end

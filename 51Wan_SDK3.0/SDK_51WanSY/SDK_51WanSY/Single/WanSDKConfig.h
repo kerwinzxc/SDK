@@ -15,6 +15,7 @@
 @property (nonatomic, assign) BOOL isIAP;//是否开启IAP支付
 @property (nonatomic, assign) BOOL isRegister;//是否开启注册按钮
 @property (nonatomic, assign) BOOL isNotice;//是否开启公告
+@property (nonatomic, assign) NSString* dealUrl;//协议链接
 @property (nonatomic, strong) WanPopModel *popModel;//公告model
 
 /**

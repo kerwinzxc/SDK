@@ -26,6 +26,7 @@
         self.isIAP = [@"0" isEqualToString:data[@"isIAP"]]?YES:NO;
         self.isRegister = [@"1" isEqualToString:data[@"isRegister"]]?NO:YES;
         self.isNotice = [@"0" isEqualToString:data[@"isNotice"]]?NO:YES;
+        self.dealUrl = [NSString stringValue:data[@"dealUrl"]];
         if (![WanUtils isDictionaryEmpty:data[@"noticePopup"]]) {
             self.popModel = [[WanPopModel alloc] initWithDictionary:data[@"noticePopup"]];
         }

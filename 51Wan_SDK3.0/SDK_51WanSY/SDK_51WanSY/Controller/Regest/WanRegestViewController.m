@@ -23,7 +23,7 @@
 }
 
 -(void)initRegestView{
-    WanRegistView *regestView = [[WanRegistView alloc] initWithFrame:CGRectMake(100, 0, WanViewWidth*kRetio, 300*kRetio)];
+    WanRegistView *regestView = [[WanRegistView alloc] initWithFrame:CGRectMake(100, 0, WanViewWidth*kRetio, 330*kRetio)];
     regestView.center = self.view.center;
     regestView.delegate = self;
     [self.view addSubview:regestView];

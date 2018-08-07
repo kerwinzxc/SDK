@@ -136,6 +136,9 @@
      28         */
     // NSString * PHS = @"^0(10|2[0-5789]|\\d{3})\\d{7,8}$";
     
+    //所有1开头的11位数字
+    NSString *all = @"^1\\d{10}$";
+    
     NSPredicate *regextestmobile = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", MOBILE];
     
     NSPredicate *regextestcm = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", CM];
@@ -144,11 +147,12 @@
     
     NSPredicate *regextestct = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", CT];
     // NSPredicate *regextestPHS = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", PHS];
-    
+     NSPredicate *regextestAll = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", all];
     if(([regextestmobile evaluateWithObject:mobile] == YES)
        || ([regextestcm evaluateWithObject:mobile] == YES)
        || ([regextestct evaluateWithObject:mobile] == YES)
-       || ([regextestcu evaluateWithObject:mobile] == YES)){
+       || ([regextestcu evaluateWithObject:mobile] == YES)
+       || ([regextestAll evaluateWithObject:mobile] == YES)){
         return YES;
     }else{
         return NO;
