@@ -69,17 +69,29 @@
     }
     
     //显示左侧工具栏
+    UIViewController *vc;
     if (WAN_SCREEN_WIDTH > WAN_SCREEN_HEIGHT) {
         WanTipWebViewController *tipWebVC = [[WanTipWebViewController alloc] init];
         tipWebVC.gameid = self.gameid;
         tipWebVC.uid = self.uid;
-        [[UIApplication sharedApplication].keyWindow.rootViewController presentViewController:tipWebVC animated:NO completion:nil];
+//        [[UIApplication sharedApplication].keyWindow.rootViewController presentViewController:tipWebVC animated:NO completion:nil];
+        vc = tipWebVC;
     }else{
         WanTipPorWebViewController *tipProWebVC = [[WanTipPorWebViewController alloc] init];
         tipProWebVC.gameid = self.gameid;
         tipProWebVC.uid = self.uid;
-        [[UIApplication sharedApplication].keyWindow.rootViewController presentViewController:tipProWebVC animated:NO completion:nil];
+//        [[UIApplication sharedApplication].keyWindow.rootViewController presentViewController:tipProWebVC animated:NO completion:nil];
+        vc = tipProWebVC;
     }
+    
+    UIViewController *rootVc = [UIApplication sharedApplication].keyWindow.rootViewController;
+    rootVc.definesPresentationContext = YES;
+    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:vc];
+    rootVc.definesPresentationContext = YES;
+    UIColor *color = [UIColor blackColor];
+    nav.view.backgroundColor = [color colorWithAlphaComponent:0.0];
+    nav.modalPresentationStyle = UIModalPresentationOverCurrentContext;
+    [rootVc presentViewController:nav animated:NO completion:nil];
     
     _halfHidenTime = autoHidenTime;
     self.tipImgView.image = [WanUtils imageInBundelWithName:@"tip_image"];

@@ -22,8 +22,8 @@
     static WanProgressHUD *hud;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        
-        hud = [[WanProgressHUD alloc] initWithWindow:[UIApplication sharedApplication].keyWindow];
+        UIWindow *window = [UIApplication sharedApplication].keyWindow == nil?[UIApplication sharedApplication].delegate.window:[UIApplication sharedApplication].keyWindow;
+        hud = [[WanProgressHUD alloc] initWithWindow:window];
     });
     return hud;
 }

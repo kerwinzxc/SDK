@@ -39,6 +39,10 @@ typedef void(^LoginCompleteBlock)(WanAccountModel *accountModel, NSDictionary *r
 #define WanTextBuleColor [UIColor colorWithHexString:@"01b0cd"]
 //分割线条颜色
 #define WanLineColor [UIColor colorWithHexString:@"3c373b"]
+//支付弹窗标题颜色
+#define WanPayBgColor [UIColor colorWithHexString:@"f1f3f7"]
+//支付弹窗标题颜色
+#define WanPayTitleColor [UIColor colorWithHexString:@"3399ff"]
 
 #pragma mark ---------------间隔距离------------------
 //关闭按钮上右间隔
@@ -47,6 +51,8 @@ typedef void(^LoginCompleteBlock)(WanAccountModel *accountModel, NSDictionary *r
 #define WanTextFieldMargin 10
 //输入框距离左右之间间隔
 #define WanTextFieldLeftMargin 20
+//支付弹窗左右侧margin
+#define WanPayLeftMargin 15
 
 #pragma mark ---------------view宽与高------------------
 //输入框高度

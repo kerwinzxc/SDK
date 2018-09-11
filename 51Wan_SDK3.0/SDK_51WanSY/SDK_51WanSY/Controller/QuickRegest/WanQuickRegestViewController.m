@@ -29,6 +29,13 @@
     [self.view addSubview:_quickRegestView];
 }
 
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    if (self.model && ![NSString isEmpty:self.model.account] && ![NSString isEmpty:self.model.password]) {
+        _quickRegestView.model = self.model;
+    }
+}
+
 #pragma mark ---WanViewActionDelegate
 -(void)viewClickActionType:(ClickButtonType)type withAccountModel:(WanAccountModel *)accountModel{
     if (type == ClickButtonTypeLogin) {
@@ -38,11 +45,5 @@
     }
 }
 
--(void)setModel:(WanAccountModel *)model{
-    if (model && ![NSString isEmpty:model.account] && ![NSString isEmpty:model.password]) {
-        _model = model;
-        _quickRegestView.model = model;
-    }
-}
 
 @end

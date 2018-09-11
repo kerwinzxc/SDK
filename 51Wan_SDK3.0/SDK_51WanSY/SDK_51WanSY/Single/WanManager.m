@@ -40,16 +40,16 @@
     }
     self.wanDelegate = wanDelegate;
     self.gameID = gameid;
-    //[WanProgressHUD showLoading:@"正在初始化SDK,请稍等..."];
+    [WanProgressHUD showLoading:@"正在初始化SDK,请稍等..."];
     [self.server getSDKConfigWithGameID:self.gameID RequesSuccess:^(NSDictionary *dict, BOOL success) {
         [[WanSDKConfig shareInstance] initWithDict:dict];
         NSLog(@"SDK初始化完成：%@",dict);
         if (self.wanDelegate && [_wanDelegate respondsToSelector:@selector(wanSDKReturnResult:forType:)]) {
-            //[WanProgressHUD showSuccess:@"初始化完成"];
+            [WanProgressHUD showSuccess:@"初始化完成"];
             [self.wanDelegate wanSDKReturnResult:dict forType:WanSDKReturnResultTypeSDKConfig];
         }
     } failed:^(NSError *error) {
-        //[WanProgressHUD showFailure:@"获取配置信息失败，请重新进入"];
+        [WanProgressHUD showFailure:@"获取配置信息失败，请重新进入"];
         NSLog(@"初始化失败：%@",error);
     }];
 }

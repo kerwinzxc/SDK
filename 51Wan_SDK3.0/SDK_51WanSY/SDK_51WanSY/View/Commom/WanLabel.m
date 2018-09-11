@@ -27,4 +27,15 @@
     return self;
 }
 
+-(instancetype)initPayTitleLabelWithFrame:(CGRect)frame title:(NSString *)title{
+    if (self = [super initWithFrame:frame]) {
+        self.backgroundColor = WanPayBgColor;
+        self.textAlignment = NSTextAlignmentCenter;
+        self.text = title;
+        self.font = [UIFont boldSystemFontOfSize:18];
+        self.textColor = WanPayTitleColor;
+    }
+    return self;
+}
+
 @end

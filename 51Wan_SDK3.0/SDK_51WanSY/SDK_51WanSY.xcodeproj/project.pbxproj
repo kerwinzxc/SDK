@@ -134,6 +134,10 @@
 		F8D0392F20207EE300387B32 /* WanToolItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F8D0392D20207EE300387B32 /* WanToolItemCell.m */; };
 		F8D0393220215C9E00387B32 /* WanTipPorWebViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = F8D0393020215C9E00387B32 /* WanTipPorWebViewController.h */; };
 		F8D0393320215C9E00387B32 /* WanTipPorWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8D0393120215C9E00387B32 /* WanTipPorWebViewController.m */; };
+		F8D660F121478DBF00B6AA6B /* WanPayViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = F8D660EF21478DBF00B6AA6B /* WanPayViewController.h */; };
+		F8D660F221478DBF00B6AA6B /* WanPayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8D660F021478DBF00B6AA6B /* WanPayViewController.m */; };
+		F8D660F621478E6D00B6AA6B /* WanPayView.h in Headers */ = {isa = PBXBuildFile; fileRef = F8D660F421478E6D00B6AA6B /* WanPayView.h */; };
+		F8D660F721478E6D00B6AA6B /* WanPayView.m in Sources */ = {isa = PBXBuildFile; fileRef = F8D660F521478E6D00B6AA6B /* WanPayView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -276,6 +280,10 @@
 		F8D0392D20207EE300387B32 /* WanToolItemCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WanToolItemCell.m; sourceTree = "<group>"; };
 		F8D0393020215C9E00387B32 /* WanTipPorWebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WanTipPorWebViewController.h; sourceTree = "<group>"; };
 		F8D0393120215C9E00387B32 /* WanTipPorWebViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WanTipPorWebViewController.m; sourceTree = "<group>"; };
+		F8D660EF21478DBF00B6AA6B /* WanPayViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WanPayViewController.h; sourceTree = "<group>"; };
+		F8D660F021478DBF00B6AA6B /* WanPayViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WanPayViewController.m; sourceTree = "<group>"; };
+		F8D660F421478E6D00B6AA6B /* WanPayView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WanPayView.h; sourceTree = "<group>"; };
+		F8D660F521478E6D00B6AA6B /* WanPayView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WanPayView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -387,6 +395,7 @@
 			children = (
 				F8D038532015EA8C00387B32 /* WanBaseViewController.h */,
 				F8D038542015EA8C00387B32 /* WanBaseViewController.m */,
+				F8D660EE21478D8B00B6AA6B /* PayViewController */,
 				F8D039172020784200387B32 /* TipWebViewController */,
 				F8D038C02019B8C100387B32 /* Pop */,
 				F8D038852016E21800387B32 /* BindInfo */,
@@ -514,6 +523,7 @@
 			children = (
 				F8D0389C201712CC00387B32 /* WanBaseView.h */,
 				F8D0389D201712CC00387B32 /* WanBaseView.m */,
+				F8D660F321478E4000B6AA6B /* Pay */,
 				F820A9E22022AD7900873CF4 /* Commom */,
 				F8D03912202077DA00387B32 /* Tip */,
 				F8D038C6201FFB6400387B32 /* Pop */,
@@ -680,6 +690,24 @@
 			path = TipWebViewController;
 			sourceTree = "<group>";
 		};
+		F8D660EE21478D8B00B6AA6B /* PayViewController */ = {
+			isa = PBXGroup;
+			children = (
+				F8D660EF21478DBF00B6AA6B /* WanPayViewController.h */,
+				F8D660F021478DBF00B6AA6B /* WanPayViewController.m */,
+			);
+			path = PayViewController;
+			sourceTree = "<group>";
+		};
+		F8D660F321478E4000B6AA6B /* Pay */ = {
+			isa = PBXGroup;
+			children = (
+				F8D660F421478E6D00B6AA6B /* WanPayView.h */,
+				F8D660F521478E6D00B6AA6B /* WanPayView.m */,
+			);
+			path = Pay;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -704,6 +732,7 @@
 				F8D038802016D92100387B32 /* WanServer.h in Headers */,
 				F8D037E42015E9B700387B32 /* UIColor+Hex.h in Headers */,
 				F8D037AE2015E6AA00387B32 /* SDK_51WanSY.h in Headers */,
+				F8D660F621478E6D00B6AA6B /* WanPayView.h in Headers */,
 				F8D038482015E9C400387B32 /* UIWebView+AFNetworking.h in Headers */,
 				F820A9E02022AAF300873CF4 /* WanTextField.h in Headers */,
 				F8D0393220215C9E00387B32 /* WanTipPorWebViewController.h in Headers */,
@@ -734,6 +763,7 @@
 				F8D039102020705600387B32 /* WanSDKConfig.h in Headers */,
 				F8D038402015E9C400387B32 /* UIImage+AFNetworking.h in Headers */,
 				F820A9D92021AAA400873CF4 /* NSString+Util.h in Headers */,
+				F8D660F121478DBF00B6AA6B /* WanPayViewController.h in Headers */,
 				F8D0387C2016C6A400387B32 /* WanLoginView.h in Headers */,
 				F820A9ED2022B24700873CF4 /* WanButton.h in Headers */,
 				F8D0383E2015E9C400387B32 /* UIButton+AFNetworking.h in Headers */,
@@ -885,6 +915,7 @@
 				F8D038782016C40A00387B32 /* WanAccountCell.m in Sources */,
 				F8D038AD201733B900387B32 /* WanPreventAddictionView.m in Sources */,
 				F8D038CA201FFC0400387B32 /* WanPopView.m in Sources */,
+				F8D660F221478DBF00B6AA6B /* WanPayViewController.m in Sources */,
 				F8D0393320215C9E00387B32 /* WanTipPorWebViewController.m in Sources */,
 				F8D038222015E9C300387B32 /* WanUtils.m in Sources */,
 				F8D0382D2015E9C300387B32 /* AFURLResponseSerialization.m in Sources */,
@@ -898,6 +929,7 @@
 				F8D0383B2015E9C400387B32 /* AFNetworkActivityIndicatorManager.m in Sources */,
 				F8D0392F20207EE300387B32 /* WanToolItemCell.m in Sources */,
 				F8D038372015E9C400387B32 /* AFAutoPurgingImageCache.m in Sources */,
+				F8D660F721478E6D00B6AA6B /* WanPayView.m in Sources */,
 				F820A9EE2022B24700873CF4 /* WanButton.m in Sources */,
 				F8D037E72015E9B700387B32 /* UIView+Frame.m in Sources */,
 				F8D038242015E9C300387B32 /* AFHTTPSessionManager.m in Sources */,
