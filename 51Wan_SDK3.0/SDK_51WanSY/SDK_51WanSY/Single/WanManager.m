@@ -8,6 +8,7 @@
 
 #import "WanManager.h"
 #import "WanLoginViewController.h"
+#import "WanPayViewController.h"
 #import "WanTipView.h"
 #import "WanServer.h"
 #import "WanInAppPurchaes.h"
@@ -126,9 +127,20 @@
 }
 
 -(void)payWithModel:(WanPayModel *)payModel{
-    NSString *urlStr = [NSString stringWithFormat:@"%@?uid=%@&cp_data=%@&desc=%@&gain=%@&goods_name=%@&money=%.0f&payment_type=5&role_name=%@&game_id=%@&server_id=%@", payURL, payModel.uid, payModel.cpData, payModel.desc, payModel.gain, payModel.goodsName, [payModel.money doubleValue]*100, payModel.roleName, payModel.gameid, payModel.serverid];
-    NSString *encodedUrlStr = [urlStr stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
-    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:encodedUrlStr]];
+    UIViewController *rootVc = [UIApplication sharedApplication].keyWindow.rootViewController;
+    rootVc.definesPresentationContext = YES;
+    
+    WanPayViewController *payVc = [[WanPayViewController alloc] init];
+    
+    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:payVc];
+    rootVc.definesPresentationContext = YES;
+    UIColor *color = [UIColor blackColor];
+    nav.view.backgroundColor = [color colorWithAlphaComponent:0.0];
+    nav.modalPresentationStyle = UIModalPresentationOverCurrentContext;
+    [rootVc presentViewController:nav animated:NO completion:nil];
+//    NSString *urlStr = [NSString stringWithFormat:@"%@?uid=%@&cp_data=%@&desc=%@&gain=%@&goods_name=%@&money=%.0f&payment_type=5&role_name=%@&game_id=%@&server_id=%@", payURL, payModel.uid, payModel.cpData, payModel.desc, payModel.gain, payModel.goodsName, [payModel.money doubleValue]*100, payModel.roleName, payModel.gameid, payModel.serverid];
+//    NSString *encodedUrlStr = [urlStr stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+//    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:encodedUrlStr]];
 }
 
 //检查应用内支付的receipt

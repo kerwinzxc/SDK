@@ -117,8 +117,8 @@ static NSString *kHandlerAssociatedKey = @"kHandlerAssociatedKey";
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:title
                                                     message:message
                                                    delegate:nil
-                                          cancelButtonTitle:@"取消"
-                                          otherButtonTitles:@"确定", nil];
+                                          cancelButtonTitle:@"아니오"
+                                          otherButtonTitles:@"예", nil];
     
     [alert showWithHandler:handler];
 }

@@ -27,6 +27,13 @@
     return self;
 }
 
+-(instancetype)initPayLineWithFrame:(CGRect)frame{
+    if (self = [super initWithFrame:frame]) {
+        self.backgroundColor = WanPayLineColor;
+    }
+    return self;
+}
+
 -(instancetype)initPayTitleLabelWithFrame:(CGRect)frame title:(NSString *)title{
     if (self = [super initWithFrame:frame]) {
         self.backgroundColor = WanPayBgColor;

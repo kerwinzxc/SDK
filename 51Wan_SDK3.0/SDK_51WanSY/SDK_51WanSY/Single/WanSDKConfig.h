@@ -17,6 +17,8 @@
 @property (nonatomic, assign) BOOL isNotice;//是否开启公告
 @property (nonatomic, assign) NSString* dealUrl;//协议链接
 @property (nonatomic, strong) WanPopModel *popModel;//公告model
+@property (nonatomic, strong) NSMutableArray *payChannelsArr;//支付方式
+@property (nonatomic, assign) CGFloat discount;//折扣
 
 /**
  * 获取单例实体对象，所有方法都使用该实例对象进行调用

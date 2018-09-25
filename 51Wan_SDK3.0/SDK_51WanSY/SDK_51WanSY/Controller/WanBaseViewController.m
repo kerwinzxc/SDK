@@ -9,6 +9,7 @@
 #import "WanBaseViewController.h"
 #import "WanTipWebViewController.h"
 #import "WanTipPorWebViewController.h"
+#import "WanPayViewController.h"
 
 @interface WanBaseViewController ()
 
@@ -34,7 +35,7 @@
 }
 
 -(void)addGestureRecognizer{
-    if (![self isKindOfClass:[WanTipWebViewController class]] && ![self isKindOfClass:[WanTipPorWebViewController class]]) {
+    if (![self isKindOfClass:[WanTipWebViewController class]] && ![self isKindOfClass:[WanTipPorWebViewController class]] && ![self isKindOfClass:[WanPayViewController class]]) {
         //点击退出编辑手势
         UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tap:)];
         [self.view addGestureRecognizer:tap];

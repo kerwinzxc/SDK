@@ -7,6 +7,7 @@
 //
 
 #import "WanSDKConfig.h"
+#import "WanPayTypeModel.h"
 
 @implementation WanSDKConfig
 
@@ -27,8 +28,21 @@
         self.isRegister = [@"1" isEqualToString:data[@"isRegister"]]?NO:YES;
         self.isNotice = [@"0" isEqualToString:data[@"isNotice"]]?NO:YES;
         self.dealUrl = [NSString stringValue:data[@"dealUrl"]];
+        self.discount = [[NSString stringValue:data[@"discount"]] floatValue];
+        
         if (![WanUtils isDictionaryEmpty:data[@"noticePopup"]]) {
             self.popModel = [[WanPopModel alloc] initWithDictionary:data[@"noticePopup"]];
+        }
+        
+        NSArray *arr = data[@"payChannel"];
+        if (![WanUtils isArrayEmpty:arr]) {
+            NSMutableArray *channelsArr = [NSMutableArray array];
+            for (int i = 0; i < arr.count; i++) {
+                NSDictionary *channelDict = arr[i];
+                WanPayTypeModel *model = [[WanPayTypeModel alloc] initWithDictionary:channelDict];
+                [channelsArr addObject:model];
+            }
+            self.payChannelsArr = channelsArr;
         }
     }
 }

@@ -39,10 +39,14 @@ typedef void(^LoginCompleteBlock)(WanAccountModel *accountModel, NSDictionary *r
 #define WanTextBuleColor [UIColor colorWithHexString:@"01b0cd"]
 //分割线条颜色
 #define WanLineColor [UIColor colorWithHexString:@"3c373b"]
+//支付弹窗分割线条颜色
+#define WanPayLineColor [UIColor colorWithHexString:@"f1f3f7"]
 //支付弹窗标题颜色
 #define WanPayBgColor [UIColor colorWithHexString:@"f1f3f7"]
 //支付弹窗标题颜色
 #define WanPayTitleColor [UIColor colorWithHexString:@"3399ff"]
+//支付弹窗支付方式详细描述
+#define WanPayDescColor [UIColor colorWithHexString:@"989fa5"]
 
 #pragma mark ---------------间隔距离------------------
 //关闭按钮上右间隔

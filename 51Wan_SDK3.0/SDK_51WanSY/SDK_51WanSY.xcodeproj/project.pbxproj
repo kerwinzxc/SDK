@@ -138,6 +138,10 @@
 		F8D660F221478DBF00B6AA6B /* WanPayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8D660F021478DBF00B6AA6B /* WanPayViewController.m */; };
 		F8D660F621478E6D00B6AA6B /* WanPayView.h in Headers */ = {isa = PBXBuildFile; fileRef = F8D660F421478E6D00B6AA6B /* WanPayView.h */; };
 		F8D660F721478E6D00B6AA6B /* WanPayView.m in Sources */ = {isa = PBXBuildFile; fileRef = F8D660F521478E6D00B6AA6B /* WanPayView.m */; };
+		F8D660FF2148B9D500B6AA6B /* WanPayTableViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = F8D660FD2148B9D500B6AA6B /* WanPayTableViewCell.h */; };
+		F8D661002148B9D500B6AA6B /* WanPayTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F8D660FE2148B9D500B6AA6B /* WanPayTableViewCell.m */; };
+		F8D661032148FE8800B6AA6B /* WanPayTypeModel.h in Headers */ = {isa = PBXBuildFile; fileRef = F8D661012148FE8800B6AA6B /* WanPayTypeModel.h */; };
+		F8D661042148FE8800B6AA6B /* WanPayTypeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F8D661022148FE8800B6AA6B /* WanPayTypeModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -284,6 +288,10 @@
 		F8D660F021478DBF00B6AA6B /* WanPayViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WanPayViewController.m; sourceTree = "<group>"; };
 		F8D660F421478E6D00B6AA6B /* WanPayView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WanPayView.h; sourceTree = "<group>"; };
 		F8D660F521478E6D00B6AA6B /* WanPayView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WanPayView.m; sourceTree = "<group>"; };
+		F8D660FD2148B9D500B6AA6B /* WanPayTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WanPayTableViewCell.h; sourceTree = "<group>"; };
+		F8D660FE2148B9D500B6AA6B /* WanPayTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WanPayTableViewCell.m; sourceTree = "<group>"; };
+		F8D661012148FE8800B6AA6B /* WanPayTypeModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WanPayTypeModel.h; sourceTree = "<group>"; };
+		F8D661022148FE8800B6AA6B /* WanPayTypeModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WanPayTypeModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -514,6 +522,8 @@
 				F8D038C3201AD54000387B32 /* WanAccountModel.m */,
 				F8D0392520207C1400387B32 /* WanTipItemModel.h */,
 				F8D0392420207C1400387B32 /* WanTipItemModel.m */,
+				F8D661012148FE8800B6AA6B /* WanPayTypeModel.h */,
+				F8D661022148FE8800B6AA6B /* WanPayTypeModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -704,6 +714,8 @@
 			children = (
 				F8D660F421478E6D00B6AA6B /* WanPayView.h */,
 				F8D660F521478E6D00B6AA6B /* WanPayView.m */,
+				F8D660FD2148B9D500B6AA6B /* WanPayTableViewCell.h */,
+				F8D660FE2148B9D500B6AA6B /* WanPayTableViewCell.m */,
 			);
 			path = Pay;
 			sourceTree = "<group>";
@@ -743,10 +755,12 @@
 				F8D0389E201712CC00387B32 /* WanBaseView.h in Headers */,
 				F8D038792016C40A00387B32 /* WanAccountCell.h in Headers */,
 				F8D038502015E9F900387B32 /* WanLoginViewController.h in Headers */,
+				F8D661032148FE8800B6AA6B /* WanPayTypeModel.h in Headers */,
 				F8D038202015E9C300387B32 /* WanConstance.h in Headers */,
 				F8D0389A2017127A00387B32 /* WanRegistView.h in Headers */,
 				F8D038442015E9C400387B32 /* UIProgressView+AFNetworking.h in Headers */,
 				F8D037DE2015E9B700387B32 /* NSString+Base64.h in Headers */,
+				F8D660FF2148B9D500B6AA6B /* WanPayTableViewCell.h in Headers */,
 				F8D038BE2019B8BA00387B32 /* WanPopViewController.h in Headers */,
 				F8D038A220171A9400387B32 /* WanModdifyPasswordViewController.h in Headers */,
 				F8D038412015E9C400387B32 /* UIImageView+AFNetworking.h in Headers */,
@@ -900,6 +914,7 @@
 				F820A9E12022AAF300873CF4 /* WanTextField.m in Sources */,
 				F8D0388E2016E28B00387B32 /* WanQuickRegestView.m in Sources */,
 				F8D038BF2019B8BA00387B32 /* WanPopViewController.m in Sources */,
+				F8D661042148FE8800B6AA6B /* WanPayTypeModel.m in Sources */,
 				F8D0385D2015EDC900387B32 /* WanManager.m in Sources */,
 				F8D038962017125800387B32 /* WanRegestViewController.m in Sources */,
 				F8D038452015E9C400387B32 /* UIProgressView+AFNetworking.m in Sources */,
@@ -908,6 +923,7 @@
 				F8D038FC202001E100387B32 /* WanPayModel.m in Sources */,
 				F8D038B0201814C000387B32 /* WanBaseModel.m in Sources */,
 				F8D038F8202001E100387B32 /* WanInAppPurchaes.m in Sources */,
+				F8D661002148B9D500B6AA6B /* WanPayTableViewCell.m in Sources */,
 				F8D0384B2015E9C400387B32 /* YRJSONAdapter.m in Sources */,
 				F8D038562015EA8C00387B32 /* WanBaseViewController.m in Sources */,
 				F8D038392015E9C400387B32 /* AFImageDownloader.m in Sources */,

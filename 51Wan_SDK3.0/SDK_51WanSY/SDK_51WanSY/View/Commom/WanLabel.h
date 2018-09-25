@@ -21,6 +21,11 @@
 -(instancetype)initLineWithFrame:(CGRect)frame;
 
 /*
+ * 支付等弹窗的标题分割线Label
+ **/
+-(instancetype)initPayLineWithFrame:(CGRect)frame;
+
+/*
  * 支付弹窗的标题Label
  **/
 -(instancetype)initPayTitleLabelWithFrame:(CGRect)frame title:(NSString *)title;
