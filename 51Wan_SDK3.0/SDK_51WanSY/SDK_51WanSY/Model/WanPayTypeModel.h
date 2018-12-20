@@ -8,6 +8,12 @@
 
 #import "WanBaseModel.h"
 
+NS_ENUM(NSInteger, WanPaymentType){
+    WanPaymentTypeWeiXin = 1 << 0,//微信支付
+    WanPaymentTypeAliPay = 1 << 1,//支付宝支付
+    WanPaymentTypeUnionPay = 1 << 2,//银联
+};
+
 @interface WanPayTypeModel : WanBaseModel
 
 @property (nonatomic, copy) NSString *imgUrl;//支付方式图片
@@ -18,7 +24,7 @@
 
 @property (nonatomic, assign) BOOL isHiden;//是否是隐藏
 
-@property (nonatomic, assign) NSString *type;//支付方式type值
+@property (nonatomic, assign) enum WanPaymentType paymentType;//支付方式type值
 
 -(id)initWithDictionary:(NSDictionary *)dict;
 

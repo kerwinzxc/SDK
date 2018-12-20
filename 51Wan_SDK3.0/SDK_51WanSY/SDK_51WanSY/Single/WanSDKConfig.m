@@ -36,12 +36,14 @@
         
         NSArray *arr = data[@"payChannel"];
         if (![WanUtils isArrayEmpty:arr]) {
+            //遍历支付方式
             NSMutableArray *channelsArr = [NSMutableArray array];
             for (int i = 0; i < arr.count; i++) {
                 NSDictionary *channelDict = arr[i];
                 WanPayTypeModel *model = [[WanPayTypeModel alloc] initWithDictionary:channelDict];
                 [channelsArr addObject:model];
             }
+            
             self.payChannelsArr = channelsArr;
         }
     }

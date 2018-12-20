@@ -7,7 +7,10 @@
 //
 
 #import "WanBaseViewController.h"
+#import "WanPayModel.h"
 
 @interface WanPayViewController : WanBaseViewController
+
+@property (nonatomic, strong) WanPayModel *payModel;
 
 @end

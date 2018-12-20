@@ -7,7 +7,12 @@
 //
 
 #import "WanBaseView.h"
+#import "WanPayModel.h"
 
 @interface WanPayView : WanBaseView
+
+@property (nonatomic, strong) WanPayModel *payModel;
+
+-(instancetype)initWithFrame:(CGRect)frame withPayModel:(WanPayModel *)payModel;
 
 @end

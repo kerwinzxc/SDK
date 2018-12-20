@@ -9,7 +9,9 @@
 #import "WanPayViewController.h"
 #import "WanPayView.h"
 
-@interface WanPayViewController ()
+@interface WanPayViewController (){
+    WanPayView *_payView;
+}
 
 @end
 
@@ -17,12 +19,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self initPayView];
 }
 
--(void)initPayView{
-    WanPayView *payView = [[WanPayView alloc] initWithFrame:self.view.bounds];
-    [self.view addSubview:payView];
+-(void)setPayModel:(WanPayModel *)payModel{
+    _payModel = payModel;
+    _payView = [[WanPayView alloc] initWithFrame:self.view.bounds withPayModel:_payModel];
+    [self.view addSubview:_payView];
 }
 
 - (void)didReceiveMemoryWarning {

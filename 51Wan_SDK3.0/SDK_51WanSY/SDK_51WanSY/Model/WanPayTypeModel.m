@@ -15,8 +15,8 @@
         self.imgUrl = [NSString stringValue:dict[@"icon"]];
         self.payTitle = [NSString stringValue:dict[@"title"]];
         self.payDesc = [NSString stringValue:dict[@"desc"]];
-        self.isHiden = [NSString stringValue:dict[@"ishidden"]];
-        self.type = [NSString stringValue:dict[@"payment_type"]];
+        self.isHiden = [@"0" isEqualToString:[NSString stringValue:dict[@"ishidden"]]] ? true : false;
+        self.paymentType = [[NSString stringValue:dict[@"payment_type"]] integerValue];
     }
     return self;
 }

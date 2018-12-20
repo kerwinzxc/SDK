@@ -16,6 +16,8 @@
     WanLabel *_line;
     UIView *_mainView;
     UIButton *_payBtn;
+    UILabel *_priceValueLabel;
+    UILabel *_discountLabel;
 }
 
 @property (nonatomic, assign) BOOL isShowAllPayChannel;
@@ -26,8 +28,9 @@
 
 @implementation WanPayView
 
--(instancetype)initWithFrame:(CGRect)frame{
+-(instancetype)initWithFrame:(CGRect)frame withPayModel:(WanPayModel *)payModel{
     if (self = [super initWithFrame:frame]) {
+        _payModel = payModel;
         [self initUI];
     }
     return self;
@@ -56,23 +59,23 @@
     [orderPriceLabel addSubview:priceLabel];
     
     if ([WanSDKConfig shareInstance].discount == 1) {
-        UILabel *priceValueLabel = [[UILabel alloc] initWithFrame:CGRectMake(priceLabel.right, 0, priceLabel.width, orderPriceLabel.height/2.0)];
-        priceValueLabel.text = @"￥1000.00";
-        priceValueLabel.textAlignment = NSTextAlignmentRight;
-        priceValueLabel.textColor = [UIColor redColor];
-        [orderPriceLabel addSubview:priceValueLabel];
-        
-        UILabel *discountLabel = [[UILabel alloc] initWithFrame:CGRectMake(priceLabel.right, priceValueLabel.bottom, priceLabel.width, orderPriceLabel.height/2.0)];
-        discountLabel.text = @"优惠   4.5折";
-        discountLabel.textAlignment = NSTextAlignmentRight;
-        discountLabel.textColor = [UIColor redColor];
-        [orderPriceLabel addSubview:discountLabel];
+        _priceValueLabel = [[UILabel alloc] initWithFrame:CGRectMake(priceLabel.right, 0, priceLabel.width, orderPriceLabel.height)];
+        _priceValueLabel.text = [NSString stringWithFormat:@"￥%@", self.payModel.money];;
+        _priceValueLabel.textAlignment = NSTextAlignmentRight;
+        _priceValueLabel.textColor = [UIColor redColor];
+        [orderPriceLabel addSubview:_priceValueLabel];
     }else{
-        UILabel *priceValueLabel = [[UILabel alloc] initWithFrame:CGRectMake(priceLabel.right, 0, priceLabel.width, orderPriceLabel.height)];
-        priceValueLabel.text = @"￥1000.00";
-        priceValueLabel.textAlignment = NSTextAlignmentRight;
-        priceValueLabel.textColor = [UIColor redColor];
-        [orderPriceLabel addSubview:priceValueLabel];
+        _priceValueLabel = [[UILabel alloc] initWithFrame:CGRectMake(priceLabel.right, 0, priceLabel.width, orderPriceLabel.height/2.0)];
+        _priceValueLabel.text = [NSString stringWithFormat:@"￥%@", self.payModel.money];
+        _priceValueLabel.textAlignment = NSTextAlignmentRight;
+        _priceValueLabel.textColor = [UIColor redColor];
+        [orderPriceLabel addSubview:_priceValueLabel];
+        
+        _discountLabel = [[UILabel alloc] initWithFrame:CGRectMake(priceLabel.right, _priceValueLabel.bottom, priceLabel.width, orderPriceLabel.height/2.0)];
+        _discountLabel.text = [NSString stringWithFormat:@"优惠:  %.1f折", [WanSDKConfig shareInstance].discount];
+        _discountLabel.textAlignment = NSTextAlignmentRight;
+        _discountLabel.textColor = [UIColor redColor];
+        [orderPriceLabel addSubview:_discountLabel];
     }
     
     //分割线
@@ -83,10 +86,11 @@
     
     _payBtn = [[UIButton alloc] initWithFrame:CGRectMake(25.0f, self.tableView.bottom + 20*kRetio, _mainView.width-2*25, 44*kRetio)];
     [_payBtn setBackgroundColor:[UIColor colorWithHexString:@"3399ff"]];
-    [_payBtn setTitle:@"确认支付 ￥1000" forState:UIControlStateNormal];
+    [_payBtn setTitle:[NSString stringWithFormat:@"确认支付:￥%.2f", [self.payModel.money floatValue]*[WanSDKConfig shareInstance].discount] forState:UIControlStateNormal];
     [_payBtn setTitleColor:[UIColor colorWithHexString:@"ffffff"] forState:UIControlStateNormal];
     _payBtn.titleLabel.font = [UIFont systemFontOfSize:17];
     _payBtn.layer.cornerRadius = 6;
+    [_payBtn addTarget:self action:@selector(pay) forControlEvents:UIControlEventTouchUpInside];
     [_mainView addSubview:_payBtn];
 }
 
@@ -167,11 +171,28 @@
 #pragma mark ----self action
 -(void)morePayType:(UIButton *)btn{
     _isShowAllPayChannel = YES;
-    _tableView.height = 44*4;
+    _tableView.height = [WanSDKConfig shareInstance].payChannelsArr.count >= 4 ? 44*4:44*[WanSDKConfig shareInstance].payChannelsArr.count;
     _mainView.height = 180*kRetio+_tableView.height;
     [_tableView reloadData];
     _payBtn.top = _tableView.bottom+20;
 }
 
+-(void)pay{
+    NSIndexPath *indexPath = _tableView.indexPathForSelectedRow;
+    WanPayTypeModel *payTypeModel = [WanSDKConfig shareInstance].payChannelsArr[indexPath.row];
+    switch (payTypeModel.paymentType) {
+        case WanPaymentTypeWeiXin:
+            
+            break;
+        case WanPaymentTypeAliPay:
+            
+            break;
+        case WanPaymentTypeUnionPay:
+            
+            break;
+        default:
+            break;
+    }
+}
 
 @end
