@@ -36,21 +36,17 @@
 -(void)payWithPayTypeModel:(WanPayTypeModel *)payTypeModel withPayModel:(WanPayModel *)payModel{
     [self.payServer getOrderWithPayType:[NSString stringWithFormat:@"%zd", payTypeModel.paymentType] goodsName:payModel.goodsName cpData:payModel.cpData money:payModel.money gameid:payModel.gameid gain:payModel.gain uid:payModel.uid serverid:payModel.serverid roleName:payModel.roleName desc:payModel.description success:^(NSDictionary *dict, BOOL success) {
         switch (payTypeModel.paymentType) {
-            case WanPaymentTypeWeiXin:
-                
-                break;
-            case WanPaymentTypeAliPay:
-                
-                break;
-            case WanPaymentTypeUnionPay:
-                
+            case WanPaymentTypeAliPayApp:
+                {
+                    
+                }
                 break;
             case WanPaymentTypePayPale:
-            {
-                WanWebViewController *webVc = [[WanWebViewController alloc] init];
-                webVc.requestUrl = dict[@"data"][@"pay_info"];
-                [self.navigationController pushViewController:webVc animated:NO];
-            }
+                {
+                    WanWebViewController *webVc = [[WanWebViewController alloc] init];
+                    webVc.requestUrl = dict[@"data"][@"pay_info"];
+                    [self.navigationController pushViewController:webVc animated:NO];
+                }
                 break;
             default:
                 break;
