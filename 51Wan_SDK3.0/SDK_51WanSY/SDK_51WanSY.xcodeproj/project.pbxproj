@@ -17,6 +17,8 @@
 		F820A9EE2022B24700873CF4 /* WanButton.m in Sources */ = {isa = PBXBuildFile; fileRef = F820A9EC2022B24700873CF4 /* WanButton.m */; };
 		F83CC4A5211160E9003ABA88 /* UILabel+AttributeTextTapAction.h in Headers */ = {isa = PBXBuildFile; fileRef = F83CC4A3211160E9003ABA88 /* UILabel+AttributeTextTapAction.h */; };
 		F83CC4A6211160E9003ABA88 /* UILabel+AttributeTextTapAction.m in Sources */ = {isa = PBXBuildFile; fileRef = F83CC4A4211160E9003ABA88 /* UILabel+AttributeTextTapAction.m */; };
+		F8B17C9D21D32104000613A8 /* WanWebViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = F8B17C9B21D32104000613A8 /* WanWebViewController.h */; };
+		F8B17C9E21D32104000613A8 /* WanWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8B17C9C21D32104000613A8 /* WanWebViewController.m */; };
 		F8D037A72015E6AA00387B32 /* SDK_51WanSY.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8D0379D2015E6AA00387B32 /* SDK_51WanSY.framework */; };
 		F8D037AE2015E6AA00387B32 /* SDK_51WanSY.h in Headers */ = {isa = PBXBuildFile; fileRef = F8D037A02015E6AA00387B32 /* SDK_51WanSY.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F8D037DE2015E9B700387B32 /* NSString+Base64.h in Headers */ = {isa = PBXBuildFile; fileRef = F8D037D42015E9B700387B32 /* NSString+Base64.h */; };
@@ -165,6 +167,8 @@
 		F820A9EC2022B24700873CF4 /* WanButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WanButton.m; sourceTree = "<group>"; };
 		F83CC4A3211160E9003ABA88 /* UILabel+AttributeTextTapAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+AttributeTextTapAction.h"; sourceTree = "<group>"; };
 		F83CC4A4211160E9003ABA88 /* UILabel+AttributeTextTapAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+AttributeTextTapAction.m"; sourceTree = "<group>"; };
+		F8B17C9B21D32104000613A8 /* WanWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WanWebViewController.h; sourceTree = "<group>"; };
+		F8B17C9C21D32104000613A8 /* WanWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WanWebViewController.m; sourceTree = "<group>"; };
 		F8D0379D2015E6AA00387B32 /* SDK_51WanSY.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SDK_51WanSY.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8D037A02015E6AA00387B32 /* SDK_51WanSY.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SDK_51WanSY.h; sourceTree = "<group>"; };
 		F8D037A12015E6AA00387B32 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -703,6 +707,8 @@
 		F8D660EE21478D8B00B6AA6B /* PayViewController */ = {
 			isa = PBXGroup;
 			children = (
+				F8B17C9B21D32104000613A8 /* WanWebViewController.h */,
+				F8B17C9C21D32104000613A8 /* WanWebViewController.m */,
 				F8D660EF21478DBF00B6AA6B /* WanPayViewController.h */,
 				F8D660F021478DBF00B6AA6B /* WanPayViewController.m */,
 			);
@@ -743,6 +749,7 @@
 				F8D038A820171ADC00387B32 /* WanModdifyPasswordView.h in Headers */,
 				F8D038802016D92100387B32 /* WanServer.h in Headers */,
 				F8D037E42015E9B700387B32 /* UIColor+Hex.h in Headers */,
+				F8B17C9D21D32104000613A8 /* WanWebViewController.h in Headers */,
 				F8D037AE2015E6AA00387B32 /* SDK_51WanSY.h in Headers */,
 				F8D660F621478E6D00B6AA6B /* WanPayView.h in Headers */,
 				F8D038482015E9C400387B32 /* UIWebView+AFNetworking.h in Headers */,
@@ -902,6 +909,7 @@
 				F8D038812016D92100387B32 /* WanServer.m in Sources */,
 				F8D038472015E9C400387B32 /* UIRefreshControl+AFNetworking.m in Sources */,
 				F8D038C5201AD54000387B32 /* WanAccountModel.m in Sources */,
+				F8B17C9E21D32104000613A8 /* WanWebViewController.m in Sources */,
 				F820A9D82021AAA400873CF4 /* NSString+Util.m in Sources */,
 				F8D0389F201712CC00387B32 /* WanBaseView.m in Sources */,
 				F8D038892016E24D00387B32 /* WanQuickRegestViewController.m in Sources */,

@@ -13,6 +13,8 @@
 
 @property (nonatomic, strong) WanPayModel *payModel;
 
+@property (nonatomic, weak) id<WanPayActionDelegate> delegate;
+
 -(instancetype)initWithFrame:(CGRect)frame withPayModel:(WanPayModel *)payModel;
 
 @end

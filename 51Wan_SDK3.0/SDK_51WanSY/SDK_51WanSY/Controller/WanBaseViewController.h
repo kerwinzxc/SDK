@@ -7,6 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "WanPayTypeModel.h"
+#import "WanPayModel.h"
 
 typedef NS_ENUM(NSInteger, ClickButtonType){
     ClickButtonTypeClose = 0,
@@ -24,6 +26,12 @@ typedef NS_ENUM(NSInteger, ClickButtonType){
 @protocol WanViewActionDelegate <NSObject>
 
 -(void)viewClickActionType:(ClickButtonType)type withAccountModel:(WanAccountModel *)accountModel;
+
+@end
+
+@protocol WanPayActionDelegate <NSObject>
+
+-(void)payWithPayTypeModel:(WanPayTypeModel *)payTypeModel withPayModel:(WanPayModel *)payModel;
 
 @end
 

@@ -29,7 +29,7 @@
         }
         
         self.ticket = [NSString stringValue:dict[@"ticket"]];
-        if (![WanUtils isDictionaryEmpty:dict[@"phone_popup"]]) {
+        if ([WanUtils isDictionaryEmpty:dict[@"phone_popup"]]) {
             self.isShowPhoneView = YES;
         }
     }

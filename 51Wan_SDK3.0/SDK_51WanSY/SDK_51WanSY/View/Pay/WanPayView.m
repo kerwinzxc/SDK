@@ -18,6 +18,7 @@
     UIButton *_payBtn;
     UILabel *_priceValueLabel;
     UILabel *_discountLabel;
+    NSInteger _initialRowNum;
 }
 
 @property (nonatomic, assign) BOOL isShowAllPayChannel;
@@ -37,7 +38,8 @@
 }
 
 -(void)initUI{
-    _mainView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 325, 180*kRetio+120)];
+    _initialRowNum = [WanSDKConfig shareInstance].payChannelsArr.count > 2 ? 2 : [WanSDKConfig shareInstance].payChannelsArr.count;
+    _mainView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 325, 180*kRetio+44*_initialRowNum+32)];
     _mainView.backgroundColor = [UIColor whiteColor];
     _mainView.layer.cornerRadius = 6;
     _mainView.clipsToBounds = YES;
@@ -97,7 +99,8 @@
 #pragma mark ----getter selector
 -(UITableView *)tableView{
     if(_tableView == nil){
-        _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, _line.bottom, _mainView.width, 44*2+32) style:UITableViewStylePlain];
+        
+        _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, _line.bottom, _mainView.width, 44*_initialRowNum+32) style:UITableViewStylePlain];
         _tableView.delegate = self;
         _tableView.dataSource = self;
         _tableView.separatorInset = UIEdgeInsetsMake(0, 0, 0, 0);
@@ -111,7 +114,7 @@
 
 #pragma mark ---<UITableViewDelegate, UITableViewDataSource>
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    if(_isShowAllPayChannel){
+    if(_isShowAllPayChannel || [WanSDKConfig shareInstance].payChannelsArr.count < 2){
         return [WanSDKConfig shareInstance].payChannelsArr.count;
     }else{
         return 2;
@@ -121,7 +124,12 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     WanPayTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:payTableViewCellIdentify];
     cell.payTypeModel = [WanSDKConfig shareInstance].payChannelsArr[indexPath.row];
-    cell.isChoose = NO;
+    if (indexPath.row == 0) {
+        cell.isChoose = YES;
+    }else{
+        cell.isChoose = NO;
+    }
+    
     return cell;
 }
 
@@ -130,7 +138,7 @@
 }
 
 -(UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section{
-    if(!_isShowAllPayChannel){
+    if(!_isShowAllPayChannel && [WanSDKConfig shareInstance].payChannelsArr.count > 2){
         UIView *footView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, _mainView.width, 32*kRetio)];
         WanLabel *lineLabel = [[WanLabel alloc] initPayLineWithFrame:CGRectMake(0, 0, _mainView.width, 1)];
         [footView addSubview:lineLabel];
@@ -180,19 +188,11 @@
 -(void)pay{
     NSIndexPath *indexPath = _tableView.indexPathForSelectedRow;
     WanPayTypeModel *payTypeModel = [WanSDKConfig shareInstance].payChannelsArr[indexPath.row];
-    switch (payTypeModel.paymentType) {
-        case WanPaymentTypeWeiXin:
-            
-            break;
-        case WanPaymentTypeAliPay:
-            
-            break;
-        case WanPaymentTypeUnionPay:
-            
-            break;
-        default:
-            break;
+    
+    if (self.delegate && [_delegate respondsToSelector:@selector(payWithPayTypeModel:withPayModel:)]) {
+        [_delegate payWithPayTypeModel:payTypeModel withPayModel:self.payModel];
     }
 }
+
 
 @end

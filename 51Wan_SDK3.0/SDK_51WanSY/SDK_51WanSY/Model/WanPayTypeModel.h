@@ -12,6 +12,7 @@ typedef NS_ENUM(NSInteger, WanPaymentType){
     WanPaymentTypeWeiXin = 1 << 0,//微信支付
     WanPaymentTypeAliPay = 1 << 1,//支付宝支付
     WanPaymentTypeUnionPay = 1 << 2,//银联
+    WanPaymentTypePayPale = 11//paypale
 };
 
 @interface WanPayTypeModel : WanBaseModel
