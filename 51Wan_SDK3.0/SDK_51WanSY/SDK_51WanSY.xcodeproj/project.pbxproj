@@ -359,7 +359,6 @@
 		F8D0379F2015E6AA00387B32 /* SDK_51WanSY */ = {
 			isa = PBXGroup;
 			children = (
-				F8D038B620181A6200387B32 /* WanManagerDelegate.h */,
 				F8D0390D2020703700387B32 /* Single */,
 				F8D039082020606A00387B32 /* SplashScreen */,
 				F8D037EC2015E9C300387B32 /* Controller */,
@@ -672,6 +671,7 @@
 		F8D0390D2020703700387B32 /* Single */ = {
 			isa = PBXGroup;
 			children = (
+				F8D038B620181A6200387B32 /* WanManagerDelegate.h */,
 				F8D0385A2015EDC900387B32 /* WanManager.h */,
 				F8D0385B2015EDC900387B32 /* WanManager.m */,
 				F8D0390E2020705600387B32 /* WanSDKConfig.h */,
@@ -1113,6 +1113,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = "\"$(SRCROOT)/SDK_51WanSY/AliPaySDK\"";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/SDK_51WanSY/Utils/WanConstance.h";
 				INFOPLIST_FILE = SDK_51WanSY/Info.plist;
@@ -1127,6 +1128,7 @@
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALID_ARCHS = "arm64 armv7 armv7s";
 			};
 			name = Debug;
 		};
@@ -1141,6 +1143,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = "\"$(SRCROOT)/SDK_51WanSY/AliPaySDK\"";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/SDK_51WanSY/Utils/WanConstance.h";
 				INFOPLIST_FILE = SDK_51WanSY/Info.plist;
@@ -1154,6 +1157,7 @@
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALID_ARCHS = "arm64 armv7 armv7s";
 			};
 			name = Release;
 		};

@@ -62,8 +62,8 @@
     
     // 进度条
     UIProgressView *progressView = [[UIProgressView alloc] initWithFrame:CGRectMake(0, 44, WAN_SCREEN_WIDTH, 0)];
-    progressView.tintColor = [UIColor redColor];
-    progressView.trackTintColor = [UIColor whiteColor];
+    progressView.tintColor = [UIColor blueColor];
+    progressView.trackTintColor = [UIColor lightGrayColor];
     [self.view addSubview:progressView];
     self.progressView = progressView;
     

@@ -62,13 +62,13 @@
     
     if ([WanSDKConfig shareInstance].discount == 1) {
         _priceValueLabel = [[UILabel alloc] initWithFrame:CGRectMake(priceLabel.right, 0, priceLabel.width, orderPriceLabel.height)];
-        _priceValueLabel.text = [NSString stringWithFormat:@"￥%@", self.payModel.money];;
+        _priceValueLabel.text = [NSString stringWithFormat:@"￥%.2f", [self.payModel.money floatValue]];;
         _priceValueLabel.textAlignment = NSTextAlignmentRight;
         _priceValueLabel.textColor = [UIColor redColor];
         [orderPriceLabel addSubview:_priceValueLabel];
     }else{
         _priceValueLabel = [[UILabel alloc] initWithFrame:CGRectMake(priceLabel.right, 0, priceLabel.width, orderPriceLabel.height/2.0)];
-        _priceValueLabel.text = [NSString stringWithFormat:@"￥%@", self.payModel.money];
+        _priceValueLabel.text = [NSString stringWithFormat:@"￥%.2f", [self.payModel.money floatValue]];
         _priceValueLabel.textAlignment = NSTextAlignmentRight;
         _priceValueLabel.textColor = [UIColor redColor];
         [orderPriceLabel addSubview:_priceValueLabel];
@@ -88,7 +88,7 @@
     
     _payBtn = [[UIButton alloc] initWithFrame:CGRectMake(25.0f, self.tableView.bottom + 20*kRetio, _mainView.width-2*25, 44*kRetio)];
     [_payBtn setBackgroundColor:[UIColor colorWithHexString:@"3399ff"]];
-    [_payBtn setTitle:[NSString stringWithFormat:@"确认支付:￥%.2f", [self.payModel.money floatValue]*[WanSDKConfig shareInstance].discount] forState:UIControlStateNormal];
+    [_payBtn setTitle:[NSString stringWithFormat:@"确认支付: ￥%.2f", [self.payModel.money floatValue]*[WanSDKConfig shareInstance].discount] forState:UIControlStateNormal];
     [_payBtn setTitleColor:[UIColor colorWithHexString:@"ffffff"] forState:UIControlStateNormal];
     _payBtn.titleLabel.font = [UIFont systemFontOfSize:17];
     _payBtn.layer.cornerRadius = 6;
@@ -99,7 +99,6 @@
 #pragma mark ----getter selector
 -(UITableView *)tableView{
     if(_tableView == nil){
-        
         _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, _line.bottom, _mainView.width, 44*_initialRowNum+32) style:UITableViewStylePlain];
         _tableView.delegate = self;
         _tableView.dataSource = self;
@@ -107,7 +106,6 @@
         _tableView.separatorColor = WanPayLineColor;
         _tableView.bounces = NO;
         [_tableView registerClass:[WanPayTableViewCell class] forCellReuseIdentifier:payTableViewCellIdentify];
-        
     }
     return _tableView;
 }

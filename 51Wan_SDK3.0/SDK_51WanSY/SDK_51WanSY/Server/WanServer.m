@@ -213,11 +213,12 @@
 
 -(BOOL)getOrderWithPayType:(NSString *)payType goodsName:(NSString *)goodsName cpData:(NSString *)cpData money:(NSString *)money gameid:(NSString *)gameid gain:(NSString *)gain uid:(NSString *)uid serverid:(NSString *)serverid roleName:(NSString *)roleName desc:(NSString *)desc success:(SuccessBlock)successBlock failed:(AFNErrorBlock)faield{
     //data
+    
     NSMutableDictionary *data = [NSMutableDictionary dictionary];
     [data setObject:[NSString stringValue:payType] forKey:@"payment_type"];
     [data setObject:[NSString stringValue:goodsName] forKey:@"goods_name"];
     [data setObject:[NSString stringValue:cpData] forKey:@"cp_data"];
-    [data setObject:[NSString stringValue:money] forKey:@"money"];
+    [data setObject:[NSString stringWithFormat:@"%.0f", [money floatValue]*100] forKey:@"money"];
     [data setObject:[NSString stringValue:gameid] forKey:@"game_id"];
     [data setObject:[NSString stringValue:gain] forKey:@"gain"];
     [data setObject:[NSString stringValue:uid] forKey:@"uid"];

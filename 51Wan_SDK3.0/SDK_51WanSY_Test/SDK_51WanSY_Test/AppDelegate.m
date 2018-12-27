@@ -49,4 +49,17 @@
 }
 
 
+- (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<UIApplicationOpenURLOptionsKey,id> *)options{
+    return [[WanManager shareInstance] application:app openURL:url options:options];
+}
+
+- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString*)sourceApplication{
+    return [[WanManager shareInstance] application:application openURL:url sourceApplication:sourceApplication];
+}
+
+- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString*)sourceApplication
+         annotation:(id)annotation{
+    return [[WanManager shareInstance] application:application openURL:url sourceApplication:sourceApplication annotation:annotation];
+}
+
 @end

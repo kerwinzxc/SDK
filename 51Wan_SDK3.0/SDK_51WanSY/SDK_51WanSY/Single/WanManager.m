@@ -13,7 +13,9 @@
 #import "WanServer.h"
 #import "WanInAppPurchaes.h"
 
-@interface WanManager()
+@interface WanManager(){
+    WanPayViewController *_payVc;
+}
 
 @property (nonatomic, weak) id<WanManagerDelegate> wanDelegate;
 @property (nonatomic, copy) NSString *gameID;
@@ -130,9 +132,9 @@
     UIViewController *rootVc = [UIApplication sharedApplication].keyWindow.rootViewController;
     rootVc.definesPresentationContext = YES;
     
-    WanPayViewController *payVc = [[WanPayViewController alloc] init];
-    payVc.payModel = payModel;
-    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:payVc];
+    _payVc = [[WanPayViewController alloc] init];
+    _payVc.payModel = payModel;
+    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:_payVc];
     rootVc.definesPresentationContext = YES;
     UIColor *color = [UIColor blackColor];
     nav.view.backgroundColor = [color colorWithAlphaComponent:0.0];
@@ -143,6 +145,21 @@
 //检查应用内支付的receipt
 -(void)checkReceiptWithUID:(NSString *)uid{
     [[WanInAppPurchaes instance] checkReceiptWithUID:uid];
+}
+
+#pragma mark -----openURl-------
+- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString*)sourceApplication
+         annotation:(id)annotation{
+    return [_payVc application:application openURL:url sourceApplication:sourceApplication annotation:annotation];
+}
+
+- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString*)sourceApplication{
+    return [_payVc application:application openURL:url sourceApplication:sourceApplication];
+}
+
+// NOTE: 9.0以后使用新API接口
+- (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<NSString*, id> *)options{
+    return [_payVc application:app openURL:url options:options];
 }
 
 #pragma mark --getter

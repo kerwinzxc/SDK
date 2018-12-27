@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F80BF70F21D49F0C00D15E30 /* AlipaySDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F80BF70D21D49F0C00D15E30 /* AlipaySDK.bundle */; };
+		F80BF71021D49F0C00D15E30 /* AlipaySDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F80BF70E21D49F0C00D15E30 /* AlipaySDK.framework */; };
 		F8131E661FFB18D900AC077A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F8131E651FFB18D900AC077A /* AppDelegate.m */; };
 		F8131E691FFB18D900AC077A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8131E681FFB18D900AC077A /* ViewController.m */; };
 		F8131E6C1FFB18D900AC077A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8131E6A1FFB18D900AC077A /* Main.storyboard */; };
@@ -29,6 +31,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F80BF70D21D49F0C00D15E30 /* AlipaySDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = AlipaySDK.bundle; sourceTree = "<group>"; };
+		F80BF70E21D49F0C00D15E30 /* AlipaySDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AlipaySDK.framework; sourceTree = "<group>"; };
 		F8131E611FFB18D900AC077A /* SDK_51WanSY_Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SDK_51WanSY_Test.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8131E641FFB18D900AC077A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		F8131E651FFB18D900AC077A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -71,6 +75,7 @@
 				F8E28EC11FFB789900AB0777 /* libz.1.2.5.tbd in Frameworks */,
 				F8E28EBF1FFB789300AB0777 /* libc++.1.tbd in Frameworks */,
 				F8E28EBD1FFB788D00AB0777 /* CFNetwork.framework in Frameworks */,
+				F80BF71021D49F0C00D15E30 /* AlipaySDK.framework in Frameworks */,
 				F8E28EBB1FFB788800AB0777 /* SystemConfiguration.framework in Frameworks */,
 				F8E28EB91FFB788100AB0777 /* CoreGraphics.framework in Frameworks */,
 				F8E28EB71FFB787A00AB0777 /* CoreTelephony.framework in Frameworks */,
@@ -83,9 +88,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F80BF70C21D49F0C00D15E30 /* AliPaySDK */ = {
+			isa = PBXGroup;
+			children = (
+				F80BF70D21D49F0C00D15E30 /* AlipaySDK.bundle */,
+				F80BF70E21D49F0C00D15E30 /* AlipaySDK.framework */,
+			);
+			name = AliPaySDK;
+			path = ../SDK_51WanSY/SDK_51WanSY/AliPaySDK;
+			sourceTree = "<group>";
+		};
 		F8131E581FFB18D900AC077A = {
 			isa = PBXGroup;
 			children = (
+				F80BF70C21D49F0C00D15E30 /* AliPaySDK */,
 				F8131E631FFB18D900AC077A /* SDK_51WanSY_Test */,
 				F8131E7C1FFB18D900AC077A /* SDK_51WanSY_TestTests */,
 				F8131E871FFB18D900AC077A /* SDK_51WanSY_TestUITests */,
@@ -222,6 +238,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F80BF70F21D49F0C00D15E30 /* AlipaySDK.bundle in Resources */,
 				F8131E711FFB18D900AC077A /* LaunchScreen.storyboard in Resources */,
 				F8131E6E1FFB18D900AC077A /* Assets.xcassets in Resources */,
 				F81B41F8200C3C6200387271 /* Bundle_51WanSY.bundle in Resources */,
@@ -378,6 +395,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HW9U4B8YY9;
 				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = "\"$(SRCROOT)/../SDK_51WanSY/SDK_51WanSY/AliPaySDK\"";
 				INFOPLIST_FILE = SDK_51WanSY_Test/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -385,12 +403,14 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/SDK_51WanSY_Test/WechtSDK1.8.2_NoPay",
 				);
+				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.669.testSDK;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALID_ARCHS = "arm64 armv7 armv7s";
 			};
 			name = Debug;
 		};
@@ -403,6 +423,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HW9U4B8YY9;
 				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = "\"$(SRCROOT)/../SDK_51WanSY/SDK_51WanSY/AliPaySDK\"";
 				INFOPLIST_FILE = SDK_51WanSY_Test/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -415,6 +436,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALID_ARCHS = "arm64 armv7 armv7s";
 			};
 			name = Release;
 		};

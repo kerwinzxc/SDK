@@ -11,7 +11,7 @@
 @interface WanPayModel : NSObject
 
 @property (nonatomic, copy) NSString *goodsName;//商品名称
-@property (nonatomic, copy) NSString *money;//充值金额
+@property (nonatomic, copy) NSString *money;//充值金额  单位为元
 @property (nonatomic, copy) NSString *balance;//余额
 @property (nonatomic, copy) NSString *cpData;//厂商透传信息
 @property (nonatomic, copy) NSString *gameid;//游戏id

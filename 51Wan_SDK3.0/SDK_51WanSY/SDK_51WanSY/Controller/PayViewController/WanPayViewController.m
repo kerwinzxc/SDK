@@ -10,6 +10,18 @@
 #import "WanPayView.h"
 #import "WanServer.h"
 #import "WanWebViewController.h"
+#import <AlipaySDK/AlipaySDK.h>
+
+//支付宝返回结果code码
+typedef NS_ENUM(NSInteger, AlipayResultCode){
+    AlipayResultCodePaySuccess        = 9000,//订单支付成功
+    AlipayResultCodePayProcessing     = 8000,//正在处理中，支付结果未知（有可能已经支付成功），请查询商户订单列表中订单的支付状态
+    AlipayResultCodePayFailed         = 4000,//订单支付失败
+    AlipayResultCodePayRepeat         = 5000,//重复请求
+    AlipayResultCodePayCancel         = 6001,//用户中途取消
+    AlipayResultCodePayNetError       = 6002,//网络连接出错
+    AlipayResultCodePayUnKnow         = 6004//支付结果未知（有可能已经支付成功），请查询商户订单列表中订单的支付状态
+};
 
 @interface WanPayViewController ()<WanPayActionDelegate>{
     WanPayView *_payView;
@@ -34,25 +46,63 @@
 
 #pragma mark ----WanPayActionDelegate
 -(void)payWithPayTypeModel:(WanPayTypeModel *)payTypeModel withPayModel:(WanPayModel *)payModel{
+    [WanProgressHUD showLoading:@"创建订单..."];
     [self.payServer getOrderWithPayType:[NSString stringWithFormat:@"%zd", payTypeModel.paymentType] goodsName:payModel.goodsName cpData:payModel.cpData money:payModel.money gameid:payModel.gameid gain:payModel.gain uid:payModel.uid serverid:payModel.serverid roleName:payModel.roleName desc:payModel.description success:^(NSDictionary *dict, BOOL success) {
-        switch (payTypeModel.paymentType) {
-            case WanPaymentTypeAliPayApp:
+        [WanProgressHUD hide];
+        if (success) {
+            switch (payTypeModel.paymentType) {
+                case WanPaymentTypeAliPayApp:
                 {
-                    
+                    NSString *pay_info = [WanUtils getResponseKey:@"pay_info" intDataDict:dict];
+                    NSString *bundleID = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleIdentifier"];
+                    [[AlipaySDK defaultService] payOrder:pay_info fromScheme:bundleID callback:^(NSDictionary *resultDic) {
+                        
+                    }];
                 }
-                break;
-            case WanPaymentTypePayPale:
+                    break;
+                case WanPaymentTypeWeiXinH5:
+                {
+                    NSString *pay_info = [WanUtils getResponseKey:@"pay_info" intDataDict:dict];
+                    NSString *bundleID = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleIdentifier"];
+                    [[AlipaySDK defaultService] payOrder:pay_info fromScheme:bundleID callback:^(NSDictionary *resultDic) {
+                        
+                    }];
+                }
+                    break;
+                case WanPaymentTypeSFTBank:
+                {
+                    NSString *pay_info = [WanUtils getResponseKey:@"pay_info" intDataDict:dict];
+                    NSString *bundleID = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleIdentifier"];
+                    [[AlipaySDK defaultService] payOrder:pay_info fromScheme:bundleID callback:^(NSDictionary *resultDic) {
+                        
+                    }];
+                }
+                    break;
+                case WanPaymentTypeWechatApplet:
+                {
+                    NSString *pay_info = [WanUtils getResponseKey:@"pay_info" intDataDict:dict];
+                    NSString *bundleID = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleIdentifier"];
+                    [[AlipaySDK defaultService] payOrder:pay_info fromScheme:bundleID callback:^(NSDictionary *resultDic) {
+                        
+                    }];
+                }
+                    break;
+                case WanPaymentTypePayPale:
                 {
                     WanWebViewController *webVc = [[WanWebViewController alloc] init];
-                    webVc.requestUrl = dict[@"data"][@"pay_info"];
+                    webVc.requestUrl = [WanUtils getResponseKey:@"pay_info" intDataDict:dict];
                     [self.navigationController pushViewController:webVc animated:NO];
                 }
-                break;
-            default:
-                break;
+                    break;
+                default:
+                    break;
+            }
+        }else{
+            NSString *info = [NSString stringValue:[WanUtils getResponseMsgWithDict:dict]];
+            [WanProgressHUD showInfoMsg:info];
         }
     } failed:^(NSError *error) {
-        
+        [WanProgressHUD hide];
     }];
     
 }
@@ -63,6 +113,61 @@
     }
     return _payServer;
 }
+
+#pragma mark -----alipay openURl-------
+- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString*)sourceApplication{
+    if ([url.host isEqualToString:@"safepay"]) {
+        [self alipayCallBackUrl:url];
+    }
+    return YES;
+}
+
+- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString*)sourceApplication
+         annotation:(id)annotation {
+    if ([url.host isEqualToString:@"safepay"]) {
+        [self alipayCallBackUrl:url];
+    }
+    return YES;
+}
+
+// NOTE: 9.0以后使用新API接口
+- (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<NSString*, id> *)options{
+    if ([url.host isEqualToString:@"safepay"]) {
+        [self alipayCallBackUrl:url];
+    }
+    return YES;
+}
+
+-(void)alipayCallBackUrl:(NSURL *)url {
+    //跳转支付宝钱包进行支付，处理支付结果
+    [[AlipaySDK defaultService] processOrderWithPaymentResult:url standbyCallback:^(NSDictionary *resultDic) {
+        NSLog(@"支付宝支付结果:%@", resultDic);
+        if (resultDic) {
+            NSInteger resultStatus = [resultDic[@"resultStatus"] integerValue];
+            switch (resultStatus) {
+                case AlipayResultCodePaySuccess:
+                {
+                    [WanProgressHUD showMessage:@"支付成功"];
+                }
+                    break;
+                    
+                case AlipayResultCodePayCancel:
+                {
+                    [WanProgressHUD showMessage:@"支付取消"];
+                }
+                    break;
+                    
+                default:
+                {
+                    [WanProgressHUD showMessage:@"支付失败"];
+                }
+                    break;
+            }
+            [self.navigationController dismissViewControllerAnimated:NO completion:nil];
+        }
+    }];
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
 }
