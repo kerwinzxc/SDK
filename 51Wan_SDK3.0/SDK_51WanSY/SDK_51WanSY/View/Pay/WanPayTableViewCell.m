@@ -70,6 +70,11 @@
     }
 }
 
+-(void)setSelected:(BOOL)selected{
+    _isChoose = selected;
+    self.isChoose = selected;
+}
+
 - (void)awakeFromNib {
     [super awakeFromNib];
 }

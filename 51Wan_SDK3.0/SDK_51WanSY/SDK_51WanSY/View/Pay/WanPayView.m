@@ -106,6 +106,7 @@
         _tableView.separatorColor = WanPayLineColor;
         _tableView.bounces = NO;
         [_tableView registerClass:[WanPayTableViewCell class] forCellReuseIdentifier:payTableViewCellIdentify];
+        [_tableView selectRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0] animated:NO scrollPosition:UITableViewScrollPositionNone];
     }
     return _tableView;
 }
@@ -122,12 +123,6 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     WanPayTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:payTableViewCellIdentify];
     cell.payTypeModel = [WanSDKConfig shareInstance].payChannelsArr[indexPath.row];
-    if (indexPath.row == 0) {
-        cell.isChoose = YES;
-    }else{
-        cell.isChoose = NO;
-    }
-    
     return cell;
 }
 
@@ -180,13 +175,17 @@
     _tableView.height = [WanSDKConfig shareInstance].payChannelsArr.count >= 4 ? 44*4:44*[WanSDKConfig shareInstance].payChannelsArr.count;
     _mainView.height = 180*kRetio+_tableView.height;
     [_tableView reloadData];
+    [_tableView selectRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0] animated:NO scrollPosition:UITableViewScrollPositionNone];
     _payBtn.top = _tableView.bottom+20;
 }
 
 -(void)pay{
     NSIndexPath *indexPath = _tableView.indexPathForSelectedRow;
+    if (indexPath == nil) {
+        [WanProgressHUD showMessage:@"请先选择支付方式"];
+        return;
+    }
     WanPayTypeModel *payTypeModel = [WanSDKConfig shareInstance].payChannelsArr[indexPath.row];
-    
     if (self.delegate && [_delegate respondsToSelector:@selector(payWithPayTypeModel:withPayModel:)]) {
         [_delegate payWithPayTypeModel:payTypeModel withPayModel:self.payModel];
     }

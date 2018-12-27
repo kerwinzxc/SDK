@@ -24,7 +24,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.gameID = @"5";
+    self.gameID = @"30";
     self.uid = @"246360";
     [self initUI];
 }
