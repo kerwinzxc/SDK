@@ -179,13 +179,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "SDK_51WanSY/SDK_51WanSY/Single/WanManager.m"
-            timestampString = "567589142.974418"
+            filePath = "SDK_51WanSY/SDK_51WanSY/Controller/TipWebViewController/WanTipWebViewController.m"
+            timestampString = "567589799.055274"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "48"
-            endingLineNumber = "48"
-            landmarkName = "-initSDKWithGameID:delegate:"
+            startingLineNumber = "148"
+            endingLineNumber = "148"
+            landmarkName = "-tableView:didSelectRowAtIndexPath:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -195,13 +195,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "SDK_51WanSY/SDK_51WanSY/Single/WanManager.m"
-            timestampString = "567589144.396306"
+            filePath = "SDK_51WanSY/SDK_51WanSY/Controller/TipWebViewController/WanTipPorWebViewController.m"
+            timestampString = "567589830.66424"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "55"
-            endingLineNumber = "55"
-            landmarkName = "-initSDKWithGameID:delegate:"
+            startingLineNumber = "105"
+            endingLineNumber = "105"
+            landmarkName = "-btnClick:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
