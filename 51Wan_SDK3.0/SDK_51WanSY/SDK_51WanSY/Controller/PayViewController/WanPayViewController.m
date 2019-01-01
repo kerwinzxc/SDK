@@ -11,6 +11,7 @@
 #import "WanServer.h"
 #import "WanWebViewController.h"
 #import <AlipaySDK/AlipaySDK.h>
+#import "WXApi.h"
 
 //支付宝返回结果code码
 typedef NS_ENUM(NSInteger, AlipayResultCode){
@@ -61,30 +62,21 @@ typedef NS_ENUM(NSInteger, AlipayResultCode){
                 }
                     break;
                 case WanPaymentTypeWeiXinH5:
-                {
+                case WanPaymentTypeSFTBank:{
                     NSString *pay_info = [WanUtils getResponseKey:@"pay_info" intDataDict:dict];
-                    NSString *bundleID = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleIdentifier"];
-                    [[AlipaySDK defaultService] payOrder:pay_info fromScheme:bundleID callback:^(NSDictionary *resultDic) {
-                        
-                    }];
-                }
-                    break;
-                case WanPaymentTypeSFTBank:
-                {
-                    NSString *pay_info = [WanUtils getResponseKey:@"pay_info" intDataDict:dict];
-                    NSString *bundleID = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleIdentifier"];
-                    [[AlipaySDK defaultService] payOrder:pay_info fromScheme:bundleID callback:^(NSDictionary *resultDic) {
-                        
-                    }];
+                    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:pay_info]];
                 }
                     break;
                 case WanPaymentTypeWechatApplet:
                 {
+                    [WXApi registerApp:[WanSDKConfig shareInstance].wxAppid];
+//                    [WXApi registerApp:@"wx93f0cc9580ac0e9d"];
                     NSString *pay_info = [WanUtils getResponseKey:@"pay_info" intDataDict:dict];
-                    NSString *bundleID = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleIdentifier"];
-                    [[AlipaySDK defaultService] payOrder:pay_info fromScheme:bundleID callback:^(NSDictionary *resultDic) {
-                        
-                    }];
+                    WXLaunchMiniProgramReq *launchMiniProgramReq = [WXLaunchMiniProgramReq object];
+                    launchMiniProgramReq.userName = @"gh_74ea4ac015e2";  //拉起的小程序的username
+                    launchMiniProgramReq.path = pay_info;    //拉起小程序页面的可带参路径，不填默认拉起小程序首页
+                    launchMiniProgramReq.miniProgramType = WXMiniProgramTypeRelease; //拉起小程序的类型
+                    [WXApi sendReq:launchMiniProgramReq];
                 }
                     break;
                 case WanPaymentTypePayPale:

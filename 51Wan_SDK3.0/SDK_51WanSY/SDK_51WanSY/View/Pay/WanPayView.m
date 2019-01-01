@@ -174,6 +174,7 @@
     _isShowAllPayChannel = YES;
     _tableView.height = [WanSDKConfig shareInstance].payChannelsArr.count >= 4 ? 44*4:44*[WanSDKConfig shareInstance].payChannelsArr.count;
     _mainView.height = 180*kRetio+_tableView.height;
+    _mainView.center = self.center;
     [_tableView reloadData];
     [_tableView selectRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0] animated:NO scrollPosition:UITableViewScrollPositionNone];
     _payBtn.top = _tableView.bottom+20;

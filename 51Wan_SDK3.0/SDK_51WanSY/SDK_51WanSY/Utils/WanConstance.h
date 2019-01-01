@@ -70,6 +70,22 @@ typedef void(^LoginCompleteBlock)(WanAccountModel *accountModel, NSDictionary *r
 //关闭按钮的宽高
 #define WanCloseBtnWidth 14.0
 
+#ifdef DEBUG
+#define NSLog(fmt,...) NSLog((@"51Wan日志信息:%s[Line %d]" fmt),__PRETTY_FUNCTION__,__LINE__,##__VA_ARGS__);
+#define debugMethod() NSLog(@"%s", __func__)
+#else
+#define NSLog(...)
+#define debugMethod()
+#endif
+
+//#ifdef DEBUG
+//#define NSLog(...) NSLog(@"51wansySDK日志信息：",__VA_ARGS__)
+//#define debugMethod() NSLog(@"%s", __func__)
+//#else
+//#define NSLog(...)
+//#define debugMethod()
+//#endif
+
 #define SYSTEM_VERSION [[[UIDevice currentDevice] systemVersion] floatValue]
 
 #define kRetio (([[UIApplication sharedApplication] statusBarOrientation] == UIDeviceOrientationLandscapeLeft || [[UIApplication sharedApplication] statusBarOrientation] == UIDeviceOrientationLandscapeRight)?([UIScreen mainScreen].bounds.size.height/375.0):([UIScreen mainScreen].bounds.size.width/375.0))

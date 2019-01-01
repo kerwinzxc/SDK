@@ -24,8 +24,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.gameID = @"30";
-    self.uid = @"246360";
+    self.gameID = @"30";//30
+//    self.uid = @"139";
     [self initUI];
 }
 
@@ -118,7 +118,11 @@
 -(void)wanSDKReturnResult:(NSDictionary *)result forType:(WanSDKReturnResultType)type{
     NSLog(@"result = %@,type = %zd", result, type);
     if (type == WanSDKReturnResultTypeSDKConfig) {
-        
+//        ([[UIDevice currentDevice] availableVersion:version]< 0)
+        [UIDevice currentDevice].
+    }else if (type == WanSDKReturnResultTypeLogin){
+        self.uid = result[@"uid"];
+        NSString *ticket = result[@"e055b792c4651167172b051c66ebc20b"];
     }
 }
 
@@ -135,22 +139,5 @@
 {
     return UIInterfaceOrientationMaskAll;
 }
-
-//- (void)motionBegan:(UIEventSubtype)motion withEvent:(UIEvent *)event {
-//    NSLog(@"----开始摇动");
-//    return;
-//}
-//
-//- (void)motionCancelled:(UIEventSubtype)motion withEvent:(UIEvent *)event {
-//    NSLog(@"----取消摇动");
-//    return;
-//}
-//
-//- (void)motionEnded:(UIEventSubtype)motion withEvent:(UIEvent *)event {
-//    if (event.subtype == UIEventSubtypeMotionShake) { // 判断是否是摇动结束
-//        NSLog(@"----摇动结束");
-//    }
-//    return;
-//}
 
 @end

@@ -1113,13 +1113,18 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_SEARCH_PATHS = "\"$(SRCROOT)/SDK_51WanSY/AliPaySDK\"";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SRCROOT)/SDK_51WanSY/AliPaySDK\"",
+					"\"$(SRCROOT)/SDK_51WanSY/WeChatSDK1.8.3\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/SDK_51WanSY/Utils/WanConstance.h";
+				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/SDK_51WanSY/WeChatSDK1.8.3\"";
 				INFOPLIST_FILE = SDK_51WanSY/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = "\"$(SRCROOT)/SDK_51WanSY/WeChatSDK1.8.3\"";
 				MACH_O_TYPE = staticlib;
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = "-Wno-objc-protocol-method-implementation";
@@ -1143,13 +1148,18 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_SEARCH_PATHS = "\"$(SRCROOT)/SDK_51WanSY/AliPaySDK\"";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SRCROOT)/SDK_51WanSY/AliPaySDK\"",
+					"\"$(SRCROOT)/SDK_51WanSY/WeChatSDK1.8.3\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/SDK_51WanSY/Utils/WanConstance.h";
+				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/SDK_51WanSY/WeChatSDK1.8.3\"";
 				INFOPLIST_FILE = SDK_51WanSY/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = "\"$(SRCROOT)/SDK_51WanSY/WeChatSDK1.8.3\"";
 				MACH_O_TYPE = staticlib;
 				OTHER_LDFLAGS = "-Wno-objc-protocol-method-implementation";
 				PRODUCT_BUNDLE_IDENTIFIER = com.669.test;
