@@ -119,7 +119,7 @@
     NSLog(@"result = %@,type = %zd", result, type);
     if (type == WanSDKReturnResultTypeSDKConfig) {
 //        ([[UIDevice currentDevice] availableVersion:version]< 0)
-        [UIDevice currentDevice].
+//        [UIDevice currentDevice].
     }else if (type == WanSDKReturnResultTypeLogin){
         self.uid = result[@"uid"];
         NSString *ticket = result[@"e055b792c4651167172b051c66ebc20b"];

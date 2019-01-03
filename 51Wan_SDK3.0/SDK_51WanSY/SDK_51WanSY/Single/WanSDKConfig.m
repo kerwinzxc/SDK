@@ -22,6 +22,8 @@
 
 -(void)initWithDict:(NSDictionary *)dict{
     if (![WanUtils isDictionaryEmpty:dict] && ![WanUtils isDictionaryEmpty:dict[@"data"]]) {
+        self.discount = 1.0;
+        self.disPayTypeNum = 0;
         NSDictionary *data = dict[@"data"];
         self.isAdult = [@"0" isEqualToString:data[@"isAdult"]]?NO:YES;
         self.isIAP = [@"0" isEqualToString:data[@"isIAP"]]?YES:NO;
@@ -30,7 +32,6 @@
         self.dealUrl = [NSString stringValue:data[@"dealUrl"]];
         self.discount = [[NSString stringValue:data[@"discount"]] floatValue];
         self.wxAppid = [NSString stringValue:data[@"wx_developers_appid"]];
-        
         if (![WanUtils isDictionaryEmpty:data[@"noticePopup"]]) {
             self.popModel = [[WanPopModel alloc] initWithDictionary:data[@"noticePopup"]];
         }
@@ -42,6 +43,9 @@
             for (int i = 0; i < arr.count; i++) {
                 NSDictionary *channelDict = arr[i];
                 WanPayTypeModel *model = [[WanPayTypeModel alloc] initWithDictionary:channelDict];
+                if (!model.isHiden){
+                    [WanSDKConfig shareInstance].disPayTypeNum += 1;
+                }
                 [channelsArr addObject:model];
             }
             

@@ -18,6 +18,7 @@
 @property (nonatomic, assign) NSString* dealUrl;//协议链接
 @property (nonatomic, strong) WanPopModel *popModel;//公告model
 @property (nonatomic, strong) NSMutableArray *payChannelsArr;//支付方式
+@property (nonatomic, assign) NSInteger disPayTypeNum;//显示支付方式数目
 @property (nonatomic, assign) CGFloat discount;//折扣
 
 @property (nonatomic, copy) NSString *wxAppid;//微信小程序Appid
