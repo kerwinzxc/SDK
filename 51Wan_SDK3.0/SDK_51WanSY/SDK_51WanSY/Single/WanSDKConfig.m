@@ -30,7 +30,7 @@
         self.isRegister = [@"1" isEqualToString:data[@"isRegister"]]?NO:YES;
         self.isNotice = [@"0" isEqualToString:data[@"isNotice"]]?NO:YES;
         self.dealUrl = [NSString stringValue:data[@"dealUrl"]];
-        self.discount = [[NSString stringValue:data[@"discount"]] floatValue];
+        self.discount = [[NSString stringValue:data[@"discount"]] floatValue]*10;
         self.wxAppid = [NSString stringValue:data[@"wx_developers_appid"]];
         if (![WanUtils isDictionaryEmpty:data[@"noticePopup"]]) {
             self.popModel = [[WanPopModel alloc] initWithDictionary:data[@"noticePopup"]];
