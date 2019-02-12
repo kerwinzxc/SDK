@@ -60,7 +60,7 @@
     priceLabel.textColor = [UIColor blackColor];
     [orderPriceLabel addSubview:priceLabel];
     
-    if ([WanSDKConfig shareInstance].discount == 1) {
+    if ([WanSDKConfig shareInstance].discount == 10) {
         _priceValueLabel = [[UILabel alloc] initWithFrame:CGRectMake(priceLabel.right, 0, priceLabel.width, orderPriceLabel.height)];
         _priceValueLabel.text = [NSString stringWithFormat:@"￥%.2f", [self.payModel.money floatValue]];;
         _priceValueLabel.textAlignment = NSTextAlignmentRight;
